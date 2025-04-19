@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="My experience with finding bugs on HackerOne and Bugcrowd platforms." />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>How I Found Bugs On Hackerone And Bugcrowd 🐞🛡️</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+
+    <!-- Custom Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+
+        .code-block a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            .blog-post-header .title {
+                font-size: 1.5rem;
+            }
+
+            .meta {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-post-body p {
+                font-size: 0.95rem;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header .title {
+                font-size: 1.3rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">How I Found Bugs On Hackerone And Bugcrowd 🐞🛡️</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Sep 21, 2024</span>
+                    <span class="time">4 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers! 👋</i></p>
+
+                <p>I hope you're all doing well.</p>
+
+                <p>Today, I'm excited to share my experience with you about finding bugs on HackerOne and Bugcrowd. So, let’s dive right into it!</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1axh0KZddcGtktX4lOt8LmA.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h3>HackerOne And Bugcrowd 🐞🛡️</h3>
+                <p>These platforms are some of the most popular places where companies connect with ethical hackers. Companies get their bugs fixed with the help of hackers, and in return, hackers receive bounties, swag, points, etc. 💰🎁</p>
+
+                <p>At this point, HackerOne and Bugcrowd are filled with both new and experienced researchers. So, whenever a new program is launched, everyone jumps in to start hunting. It’s like a race 🏁—the first one to report gets the bounty! 💸</p>
+
+                <p>However, sometimes HackerOne and Bugcrowd use automated responses 🤖, and they don’t always review reports properly. I've personally experienced this several times. Even though my bug was valid or sometimes even critical, it often got marked as "Informative" or closed because I didn’t have enough reputation points or signal. Meanwhile, others with more reputation had their reports accepted. 😞</p>
+
+                <p>I believe that if they reviewed the reports carefully, more researchers would receive the credit they deserve. I even posted about this issue on LinkedIn recently! You can check out the full story there: <a href="https://www.linkedin.com/posts/utsavpari-gosai-9b1558230_bugbounty-hackerone-activity-7242074548467060739-NS7u">LinkedIn Post</a></p>
+
+                <p>And I also posted one Medium article about my Critical finding at HackerOne but was surprised by the company's response. You can check out the full story here: <a href="/articles/index-12.html">Article</a> 🔗</p>
+
+                <h3>Finding Bugs 🐞</h3>
+                <p>I recently found a bug on HackerOne in a health-related website. Unfortunately, I can’t disclose the name, but here’s a tip: try adding <code>wp-json/wp/v2/</code> to your wordlist. It revealed a large amount of JSON data, including accessible paths like <code>/wp-json/wp/v2/users</code>, <code>/wp-json/wp/v2/comments</code>, <code>/wp-json/wp/v2/posts</code>, <code>/wp-json/wp/v2/doctors</code>, <code>/wp-json/wp/v2/patients</code>, and sometimes even <code>/wp-json/wp/v2/admins</code>. 😯</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1pJdOrmuhmHr3t9eBkQ7YfQ.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>I reported the bug, expecting another "Informative" closure. But this time, the triage team reviewed the report manually (no automated response!), validated it, and confirmed it as a valid bug. Unfortunately, it turned out to be a duplicate. 💔 But, on the bright side, at least it was marked as a medium severity issue, not just Informative, so I’m happy with that!</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/15f16V1sRDW2D5zgSl_iAhw.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h3>Moving to Bugcrowd</h3>
+                <p>Now, moving on to Bugcrowd. This was a simple P4 bug—a website was leaking FTP access at <code>https://*.target.com/ftp</code>. I reported it, and it was accepted, but guess what? Another duplicate! 😅</p>
+
+                <p>Here’s another tip: try <code>/ftp</code> on your target; sometimes you’ll find unprotected FTP servers leaking data without any passwords. 🔓</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1lm-wk3rt8XtZlM_1Mnkc7Q.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>These bugs were fixed and resolved a while ago, but sadly, both were duplicates. Still, that’s the life of a hacker or bug bounty hunter! 😄 It happens to everyone at some point. No pain, just aiming for the next bug! 🎯</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1KoMayNTZ6DgPwGbqVY8C_w.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h3>Final Thoughts 💭</h3>
+                <p>The purpose of sharing this story is to motivate you all to keep hunting, whether on HackerOne, Bugcrowd, or any private program or VDP. I hope you’ve learned something from my experience. Be the first to report, but most importantly, keep reporting and stay positive. 🙌 Whether you get "Informative," "Duplicate," or "Accepted," you’ve done your job. Don’t get discouraged—it’s not always your fault. Just do your work and leave the rest to fate. ✨</p>
+
+                <p>That’s it for today. Thank you for reading, and I hope this helps any newbie or experienced hacker out there. ❤️</p>
+
+                <p><strong>MR. X FACTOR</strong></p>
+
+                <h3>Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+                     *  PLATFORM OR CMS.
+                     *  
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+                     *  https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.url = PAGE_URL;  
+                        
+                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    
+                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document, s = d.createElement('script');
+                        
+                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div><!--//blog-comments-section-->
+        </article>
+    </div>
+</body>
+
+</html>

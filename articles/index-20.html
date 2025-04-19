@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How I Hacked Indian Government’s Websites and Got Acknowledgement from the Government of India by Utsavpari Gosai" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>How I Hacked Indian Government’s Websites and Got Acknowledgement 🇮🇳💻🔓</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">How I Hacked Indian Government’s Websites and Got Acknowledgement from the Government of India 🇮🇳 💻🔓🛡️</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Sep 22, 2024</span>
+                    <span class="time">5 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers!</i> 👋</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1EK18XSsutM2G9CC04SzkGQ.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>I hope you all are doing well, securing our digital world, and safeguarding the digital infrastructure of our country. 🛡️ As many of you know, India is undergoing a massive digital transformation, with the push towards a cashless economy and more digital services becoming available each day. With that comes the increased importance of cybersecurity.</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1hFdwW6YO0gJB-GJyyQgw7Q.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>According to various reports, India needs around 10 to 30 lakh ethical hackers and cybersecurity professionals to keep up with growing cyber threats, yet we currently produce only around 5 lakh specialists. This gap creates a crucial demand for cybersecurity experts, and in the near future, we may see the government release even more opportunities for ethical hackers and cybersecurity professionals.</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1dD-abRyQJL0xlimSznd9og.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>In this rapidly evolving field, it’s our responsibility to contribute toward a secure digital India. I’m proud to say that I’ve had the chance to do just that by discovering vulnerabilities in government websites, reporting them, and receiving acknowledgements from authorities. 🚨</p>
+
+                <h3>What is NCIIPC? 🤔</h3>
+                <p>Before diving into the story, let’s talk about NCIIPC — The National Critical Information Infrastructure Protection Centre. It is the Indian government agency responsible for protecting the country’s Critical Information Infrastructure (CII), which includes servers, databases, banks, power plants, and telecom networks.</p>
+
+                <p>If you ever find a bug on a government website (ending with .gov.in), you can report it to the NCIIPC Responsible Vulnerability Disclosure Program (RVDP) via their official website: <a href="https://nciipc.gov.in/RVDP.html" target="_blank">https://nciipc.gov.in/RVDP.html</a> Based on the severity of the bug, they patch it and acknowledge your contribution. This is where I reported my findings, contributing to securing Digital India. 🇮🇳</p>
+
+                <p>Now, let me share my story of discovering two critical vulnerabilities on Indian government websites and how the government acknowledged my efforts. 🚀</p>
+
+                <h3>First Bug 🐞</h3>
+                <p>Recently, I found a high and medium-severity vulnerability on one of the Indian government websites, let’s call it “target.gov.in” for security reasons. The website was using WordPress, and as many security professionals know, WordPress sites can be vulnerable if not configured properly. I began testing for WordPress-related bugs, and soon, I found a critical one.</p>
+
+                <h4>Vulnerability #1: XML-RPC Attack 🚧</h4>
+                <p>The website had XML-RPC enabled, which is a feature in WordPress used for functions like pingbacks and trackbacks. However, when misused, it can lead to large-scale DDoS attacks and brute force attacks on login credentials. Here’s how I discovered it:</p>
+
+                <div class="code-block">
+                    POST /xmlrpc.php HTTP/2<br />
+                    Host: target.gov.in<br />
+                    &lt;methodCall&gt;<br />
+                    &lt;methodName&gt;system.listMethods&lt;/methodName&gt;<br />
+                    &lt;params&gt;&lt;/params&gt;<br />
+                    &lt;/methodCall&gt;
+                </div>
+
+                <p>The response I received confirmed that XML-RPC was enabled. This made the site vulnerable to DDoS attacks, as XML-RPC can be automated to send requests from multiple hosts, overwhelming the server. It could also be used to brute force admin credentials and gain unauthorized access to the website. 😱</p>
+
+                <h4>Example of Brute Force Attack Request:</h4>
+                <div class="code-block">
+                    &lt;methodCall&gt;<br />
+                    &lt;methodName&gt;wp.getUsersBlogs&lt;/methodName&gt;<br />
+                    &lt;params&gt;<br />
+                    &lt;param&gt;&lt;value&gt;{your_username}&lt;/value&gt;&lt;/param&gt;<br />
+                    &lt;param&gt;&lt;value&gt;{your_password}&lt;/value&gt;&lt;/param&gt;<br />
+                    &lt;/params&gt;<br />
+                    &lt;/methodCall&gt;
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1FpWfQI40JKNdYWG_icxQfA.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/11cm2uBvxNdjAI0uIQMuIZw.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h4>How to Fix It 🛠️</h4>
+                <p>I suggested that the XML-RPC file should either be disabled or removed if not in use. At the very least, it should be blocked from external access to prevent such attacks.</p>
+
+                <p>After reporting this, the issue was acknowledged, and I was glad to contribute to securing the country’s digital infrastructure! 🙌</p>
+
+                <h3>Second Bug 🐞</h3>
+                <p>The second vulnerability I found was even more critical. This time, it was on an education-related government website that was leaking Personally Identifiable Information (PII) and sensitive documents, including exam papers.</p>
+
+                <h4>Vulnerability 2: Directory Listing Exposure 🔍</h4>
+                <p>While using Google Dorking techniques</p>
+                <div class="code-block">site:*.gov.in indexof /</div>
+
+                <p>I discovered that one of the directories on the website was exposed to the public. Anyone could access the /wp-content/uploads/ folder and view or download the files stored there. This directory contained exam papers and documents with sensitive personal data.</p>
+
+                <h4>Steps to Reproduce:</h4>
+                <ul>
+                    <li>Open a web browser.</li>
+                    <li>Navigate to the URL: <code>https://target.gov.in/wp-content/uploads/</code>.</li>
+                    <li>You will see the entire list of files and folders within the uploads directory, including sensitive documents.</li>
+                </ul>
+
+                <h4>Impact 💥</h4>
+                <p>The directory listing vulnerability exposed critical information that unauthorized users could access. This type of vulnerability can lead to:</p>
+                <ul>
+                    <li>Exposure of sensitive data (personal data, exam papers, etc.)</li>
+                    <li>Potential data breaches</li>
+                    <li>Information leakage for future attacks</li>
+                    <li>Compliance violations (such as violating data protection regulations like GDPR)</li>
+                </ul>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1qPzq2uAOlJceGQMHJfEHPg.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h4>How to Fix It 🛠️</h4>
+                <p>To fix this, I recommended disabling directory listing by adding the following line to the website’s <code>.htaccess</code> file:</p>
+                <div class="code-block">Options -Indexes</div>
+
+                <p>Additionally, I advised the site administrators to restrict access to sensitive directories and implement proper authentication to prevent unauthorized access.</p>
+
+                <h3>Acknowledgement and Contribution 🏆</h3>
+                <p>Both vulnerabilities were reported to the concerned authorities, and they took swift action to patch the issues. Although I didn’t receive a formal letter of recognition, my contribution was acknowledged, and that itself felt rewarding. Knowing that I had helped secure the digital landscape of my country is what drives me to keep going.</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="/articles/images/1nv6APYr9K_8_PmZ2K2XvMg.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h3>Final Thoughts 💭</h3>
+                <p>Cybersecurity is an ever-growing field, especially with India’s push towards digital transformation. With numerous vulnerabilities still present, I encourage all ethical hackers to step up and contribute to keeping our country’s digital space safe and secure. 🚀</p>
+
+                <p>Remember, it’s not just about finding bugs — it’s about making a meaningful impact on the security of the digital infrastructure we all depend on.</p>
+
+                <p>Thank you for reading, and I hope you learned something valuable from my experiences. Keep hacking, keep securing, and let’s work together to safeguard our digital future! 💻🔐</p>
+
+                <p>Keep Hacking, Keep Securing, Keep Safe.</p>
+
+                <p><strong>Thank You!<br>MR.X FACTOR</strong></p>
+
+                <h3 class="mt-5 mb-3">Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+                     *  PLATFORM OR CMS.
+                     *  
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+                     *  https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.url = PAGE_URL;  
+                        
+                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    
+                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document, s = d.createElement('script');
+                        
+                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div><!--//blog-comments-section-->
+        </article>
+    </div>
+
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>

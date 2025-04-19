@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="3rd Bounty ₹5000 Story" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>3rd Bounty ₹5000 - My Journey in Bug Bounty</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+
+    <!-- Custom Google Font (You can replace this with your own font link) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            .blog-post-header .title {
+                font-size: 1.5rem;
+            }
+
+            .meta {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-post-body p {
+                font-size: 0.95rem;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header .title {
+                font-size: 1.3rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">3rd Bounty ₹5000: WordPress Information Disclosure</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Jun 16, 2023</span>
+                    <span class="time">2 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+            
+                <p><i>Hello Hackers,</i></p>
+
+                <p>Today I will share with you my third bounty, which involved information disclosure. So, without wasting time, let’s get started.</p>
+
+                <p>I was hunting on a program that used WordPress. To begin, I obtained a WordPress-based wordlist from the PayloadAllTheThings GitHub repository and started fuzzing. I encountered several 404 and 403 errors, along with some false positives. However, I then stumbled upon something interesting: <code>https://example.com/wp/wp-admin/install.php</code>. When I visited this URL, it displayed a message from WordPress stating that the WordPress installation was already complete and provided a link to log in.</p>
+
+                <p>Curious to explore further, I attempted to change “install.php” to “delete.php” and “remove.php,” but these attempts did not yield any results. Then, I decided to try “upgrade.php,” which revealed a message stating that the database was already upgraded. This indicated that the site was using the latest version of WordPress. However, if it wasn’t up to date, it would display the WordPress version number. Since several WordPress plugins were recently found to be vulnerable, exploiting this vulnerability could provide information about the version being used and potentially allow for an upgrade without the company’s knowledge.</p>
+
+                <p>I reported this issue to the company, highlighting it as an information disclosure vulnerability. The company acknowledged the report, resolved the issue, and changed the HTTP response of the page from 200 to 401. As a reward, they granted me ₹5000.</p>
+
+                <p>This is the story of my encounter with a WordPress CMS information disclosure vulnerability. I would like to recommend to any bug bounty beginners that if your target uses WordPress, always try adding “<code>/wp/wp-admin/install.php,” “/wp-admin/install.php,” or “upgrade.php</code>” to your testing. By doing so, you can help secure the company and potentially identify vulnerabilities. Remember, not all work is driven by the pursuit of bounty; having good intentions and motives can lead to success, supported by your faith and the support of loved ones.</p>
+
+                <p>I am grateful to God, my family, and a special person who always supports me.</p>
+
+                <br>
+
+                <img src="/articles/images/1_b1Euco_BC9QTc30QhXDUTQ.webp" style="border: 2px solid black;">
+
+                <br>
+
+                <p>Thank you for reading. I am not a professional writer, but I wrote this to assist fellow bug hunters with my experience.</p>
+
+                <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
+
+                <h3 class="mt-5 mb-3">🔗 Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+                     *  PLATFORM OR CMS.
+                     *  
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+                     *  https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.url = PAGE_URL;  
+                        
+                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    
+                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document, s = d.createElement('script');
+                        
+                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div><!--//blog-comments-section-->
+        </article>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>

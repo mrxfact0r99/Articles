@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="WordPress Websites Hacking Tips by Utsavpari Gosai" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>WordPress Websites Hacking Tips</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+
+    <!-- Custom Google Font (Replace with your preferred font) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+
+        .code-block a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            .blog-post-header .title {
+                font-size: 1.5rem;
+            }
+
+            .meta {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-post-body p {
+                font-size: 0.95rem;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header .title {
+                font-size: 1.3rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">WordPress Websites Hacking Tips</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Jan 1, 2024</span>
+                    <span class="time">2 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers!</i></p>
+
+                <br>
+
+                <img src="/articles/images/116Pz_u1-SVr7oakDQdRbmA.webp" style="border: 2px solid black;">
+
+                <br>
+
+                <p>How are you? Today, I am going to share a tip on finding vulnerabilities in WordPress websites. This can be useful for pentesting WordPress websites, especially when you identify that a website is using WordPress in the backend (you can use tools like Wappalyzer for this).</p>
+
+                <p><strong>Here are the steps:</strong></p>
+
+                <ul>
+                    <li>Open any image of the website in a new tab.</li>
+                    <li>Remove all content from the URL and enter either of these:</li>
+                    <ul>
+                        <li><code>wp-json/wp/v2/users</code> — <a href="https://example.com/wp-json/wp/v2/users" target="_blank">https://example.com/wp-json/wp/v2/users</a></li>
+                    </ul>
+                    <li>This may reveal various user details such as ID, name, avatars, etc.</li>
+                    <li>Additionally, you can try:</li>
+                    <ul>
+                        <li><code>/wp/wp-admin/install.php</code></li>
+                        <li><code>/wp/wp-admin/upgrade.php</code></li>
+                        <li><code>/wp-admin/install.php</code></li>
+                    </ul>
+                    <li>Checking these URLs might provide information about the status of the database and WordPress.</li>
+                </ul>
+
+                <p>If the results resemble what is shown in the image, you can report it as information disclosure. This is valuable for understanding user details, gaining insights into the WordPress version, and the backend situation. Report the bug, and you might receive an awesome bounty.</p>
+
+                <p>In my early days, I wrote a detailed article about my experience with this technique. You can read it <a href="/articles/index-04.html" target="_blank">HERE</a>.</p>
+
+                <p><strong>Note:</strong> Some websites may accept this bug, while others might reject it, claiming it is not a bug. Be aware before reporting. I share this experience for beginners in the field who are eager to learn something new and are on the lookout for their first bug and bounty.</p>
+
+                <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
+
+                <h3 class="mt-5 mb-3">🔗 Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+                     *  PLATFORM OR CMS.
+                     *  
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+                     *  https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.url = PAGE_URL;  
+                        
+                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    
+                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document, s = d.createElement('script');
+                        
+                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div><!--//blog-comments-section-->
+        </article>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>

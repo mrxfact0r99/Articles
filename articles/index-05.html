@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Bug Bounty Hunting Tools Developed By Utsavpari Gosai" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>Bug Bounty Hunting Tools (Mini Projects) Created By Me</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+
+    <!-- Custom Google Font (Replace with your preferred font) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 2rem auto;
+            border-radius: 10px;
+            border: 2px solid #000;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            word-wrap: break-word;
+            overflow-x: auto;
+        }
+
+        .code-block a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            .blog-post-header .title {
+                font-size: 1.5rem;
+            }
+
+            .meta {
+                font-size: 0.85rem;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .blog-post-body p {
+                font-size: 0.95rem;
+            }
+
+            img {
+                border-radius: 8px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header .title {
+                font-size: 1.3rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">Bug Hunting Tools (Mini Projects) Created By Me</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Sep 17, 2023</span>
+                    <span class="time">2 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers,</i></p>
+
+                <br>
+
+                <img src="/articles/images/240_F_293068579_c0qT1fZv4qLmVSeskOPEmXMTz8P0Agtd.jpg" style="border: 2px solid black;">
+
+                <br>
+
+                <p>As the world of cybersecurity evolves, bug bounty hunters are on the front lines, helping organizations identify and rectify vulnerabilities before malicious actors can exploit them. In my journey as a bug bounty hunter, I've found that having the right tools can make all the difference. That's why I'm excited to introduce you to two powerful tools I developed for bug bounty hunting - <strong>Xshotter</strong> and <strong>Xtractor</strong>.</p>
+
+                <h3>Xshotter: Capturing the Visuals</h3>
+                <p><a href="https://github.com/mrxfact0r99/Xshotter.git" target="_blank">Xshotter GitHub Repository</a></p>
+
+                <p>Xshotter is designed to simplify the process of capturing screenshots from a list of target URLs. Whether you're looking to assess the visual elements of a web application or need to document findings for your bug bounty reports, Xshotter has got you covered. It's a command-line tool that's both easy to use and highly customizable.</p>
+
+                <p>With Xshotter, you can:</p>
+                <ul>
+                    <li>Visit a list of target URLs.</li>
+                    <li>Take screenshots of web pages.</li>
+                    <li>Save the screenshots for further analysis or documentation.</li>
+                </ul>
+                <p>Check out the <a href="https://github.com/mrxfact0r99/Xshotter/blob/main/README.md" target="_blank">Xshotter README</a> for detailed usage instructions and customization options.</p>
+
+                <h3>Xtractor: Uncovering Hidden Clues</h3>
+                <p><a href="https://github.com/mrxfact0r99/Xtractor.git" target="_blank">Xtractor GitHub Repository</a></p>
+
+                <p>Xtractor is another indispensable tool in your bug bounty arsenal. It's designed to extract HTML comments from web pages, which can often contain valuable information about a site's architecture, developer notes, or even security misconfigurations.</p>
+
+                <p>With Xtractor, you can:</p>
+                <ul>
+                    <li>Visit target URLs and parse HTML content.</li>
+                    <li>Extract HTML comments for analysis.</li>
+                    <li>Gain insights into the inner workings of web applications.</li>
+                </ul>
+                <p>For a deep dive into using Xtractor effectively, head over to the <a href="https://github.com/mrxfact0r99/Xtractor/blob/main/README.md" target="_blank">Xtractor README</a>.</p>
+
+                <h3>How These Tools Enhance Bug Bounty Hunting?</h3>
+
+                <p>Bug bounty hunting is all about finding and responsibly disclosing security vulnerabilities. Xshotter and Xtractor can significantly enhance your workflow by providing you with visual and textual clues that may lead to the discovery of critical issues. Whether you're a seasoned bug bounty hunter or just getting started, these tools can save you time and improve your results.</p>
+
+                <h3>Get Started Today:</h3>
+                <p>I've open-sourced Xshotter and Xtractor on GitHub to share them with the bug bounty community. You can find both tools in my GitHub repository at <a href="https://github.com/mrxfact0r99" target="_blank">https://github.com/mrxfact0r99</a>. Be sure to explore the README files for each tool to get started quickly.</p>
+
+                <p>Bug bounty hunting is a collaborative effort, and these tools are my way of contributing to the community. I hope you find them useful in your quest to make the internet a safer place.</p>
+
+                <h3>Conclusion:</h3>
+                <p>Bug bounty hunting requires a combination of skills, knowledge, and tools. Xshotter and Xtractor can be valuable additions to your toolkit, helping you uncover vulnerabilities and improve your bug bounty game. By open-sourcing these tools, I aim to foster collaboration and empower fellow bug hunters to excel in their endeavors. Give them a try, and together, we can make the digital world more secure.</p>
+
+                <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
+
+                <h3 class="mt-5 mb-3">🔗 Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
+                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
+                     *  PLATFORM OR CMS.
+                     *  
+                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
+                     *  https://disqus.com/admin/universalcode/#configuration-variables
+                     */
+                    
+                    var disqus_config = function () {
+                        // Replace PAGE_URL with your page's canonical URL variable
+                        this.page.url = PAGE_URL;  
+                        
+                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    
+                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+                        var d = document, s = d.createElement('script');
+                        
+                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div><!--//blog-comments-section-->
+        </article>
+    </div>
+
+    <!-- Scripts -->
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>
