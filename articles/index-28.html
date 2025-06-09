@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="$50 For Many Bug Hunters Missed.....💲 by MR.X FACTOR" />
+    <meta name="author" content="MR.X FACTOR" />
+    <title>$50 For Many Bug Hunters Missed💲</title>
+
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            display: inline-block;
+            margin: 0 8px;
+        }
+
+        .meta a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        .blog-post-body strong {
+            color: #333;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            font-size: 0.95rem;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 1.2rem;
+            }
+
+            .blog-post-header .title {
+                font-size: 1.5rem;
+            }
+
+            .meta {
+                font-size: 0.85rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .blog-post-header .title {
+                font-size: 1.3rem;
+            }
+
+            .blog-post-body p {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">$50 For Many Bug Hunters Missed.....💲</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Jun 9, 2025</span>
+                    <span class="time">3 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers,</i></p>
+
+                <p>I hope you all are fine and well. So first of all, sorry for not sharing any bug hunting stories recently. Because of holidays and vacations, I was busy enjoying time with family and friends, so no stories or articles were uploaded. But now the vacation is over, so it’s back to work! 💻🎯</p>
+
+                <p>I am going to share with you an interesting and commonly ignored type of bug today. So let’s get started! 🐞🔍</p>
+
+                <p>I began by analyzing the structure of the target web application. This step is very important and often missed by many bug hunters. While exploring, I discovered a page named <code>SupportForm.aspx</code>. It had input fields like name, email, your query, some other options, and a submit button.</p>
+
+                <p>I usually start by sending a demo message to see how the form works. Then I tried sending blind SSRF and blind XSS payloads — but nothing worked. I assumed there was no bug and thought about moving on.</p>
+
+                <p>But suddenly, while I was eating 🍽️, an idea hit me 💡 — what happens if I submit the form using any random email address?</p>
+
+                <p>I tried it, and surprisingly, it got submitted and accepted successfully ✅.</p>
+
+                <p>Then I wondered — why not try sending it using an admin or company email address? I used OSINT to find some company emails and submitted the form again. And guess what? It worked! The message was sent successfully using their internal email address. 📬</p>
+
+                <h3>So what is the bug?</h3>
+
+                <p>There’s a twist here. The form was:</p>
+
+                <ul>
+                    <li>Accepting any email address, including internal or company ones.</li>
+                </ul>
+
+                <p><strong>This Means:</strong></p>
+
+                <ul>
+                    <li>Attackers can impersonate company employees or customers and submit misleading or malicious requests (like asking for password resets, admin access, or sensitive info).</li>
+                    <li>If internal teams respond to spoofed messages without verifying the sender, attackers might receive confidential information.</li>
+                    <li>Combined with user enumeration, attackers can target known employees or customers with social engineering.</li>
+                    <li>This seriously undermines the integrity of the support system. ⚠️</li>
+                </ul>
+
+                <p>I reported it with this mindset, and the report was accepted in 10 days. I received a $50 reward. 🤑</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/WhatsApp Image 2025-06-09 at 11.30.00 AM.jpeg" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p><strong>The Takeaway:</strong> Bugs are everywhere — you just need to think like an attacker or hacker. Understand how the company works, and you’ll find vulnerabilities that many others miss. 🧠💥</p>
+
+                <p>That’s all for today. Thank you for reading! If you have any questions or need help, feel free to reach out via the link below.</p>
+
+                <p><strong>Thank You,<br>MR.X FACTOR 🚀</strong></p>
+
+                <h3 class="mt-5 mb-3">🔗 Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                </ul>
+            </div>
+
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="../index.html" style="
+                    display: inline-block;
+                    padding: 0.75rem 1.5rem;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-family: 'Roboto', sans-serif;
+                    transition: background-color 0.3s ease;
+                " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+                    ← Back To Homepage
+                </a>
+            </div>
+
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = window.location.href;
+                        this.page.identifier = "bughunter_50_story";
+                    };
+
+                    (function () {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div>
+        </article>
+    </div>
+
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+</body>
+
+</html>
