@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="3rd Bounty ₹5000 Story" />
+    <meta name="description" content="How I Got My First Hall Of Fame From HostGator....." />
     <meta name="author" content="Utsavpari Gosai" />
-    <title>3rd Bounty ₹5000: WordPress Information Disclosure From Upstox</title>
+    <title>How I Got My First Hall Of Fame From HostGator.....</title>
 
     <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
@@ -135,10 +135,10 @@
     <div class="main-wrapper">
         <article class="container">
             <header class="blog-post-header">
-                <h2 class="title">3rd Bounty ₹5000: WordPress Information Disclosure From Upstox</h2>
+                <h2 class="title">How I Got My First Hall Of Fame From HostGator.....</h2>
                 <hr />
                 <div class="meta">
-                    <span class="date">Jun 16, 2023</span>
+                    <span class="date">June 3, 2022</span>
                     <span class="time">2 min read</span>
                     <span class="author">Utsavpari Gosai</span>
                 </div>
@@ -146,37 +146,43 @@
             </header>
 
             <div class="blog-post-body">
-            
-                <p><i>Hello Hackers,</i></p>
 
-                <img src="images/202411041619111.jpg" style="border: 2px solid black;">
+                <p>whoami</p>
 
+                <img src="images/04NjPgionzQLG3UrajP7Gc1-19.fit_scale.size_1028x578.v1597850218(1).jpg"
+                    style="border: 2px solid black;">
 
-                <p>Today I will share with you my third bounty, which involved information disclosure. So, without wasting time, let’s get started.</p>
+                <p>I am a 19-year-old Ethical Hacker, Application Security and Cyber Security Analyst, and Bug Hunter.
+                </p>
 
-                <p>I was hunting on a program that used WordPress. To begin, I obtained a WordPress-based wordlist from the PayloadAllTheThings GitHub repository and started fuzzing. I encountered several 404 and 403 errors, along with some false positives. However, I then stumbled upon something interesting: <code>https://example.com/wp/wp-admin/install.php</code>. When I visited this URL, it displayed a message from WordPress stating that the WordPress installation was already complete and provided a link to log in.</p>
+                <p>This is my first write-up to share knowledge with beginners or anyone who can benefit from my
+                    experience.</p>
+                <p>So let's start the story. There’s nothing too fancy—I'm just learning bug bounty and trying different
+                    platforms and programs. I came across the HostGator VDP program on Bugcrowd wich not offering any Money but so I decided to practice on
+                    it. Suddenly, I found a bug, which turned out to be a low-impact injection bug. Without overthinking
+                    it, I reported it—and boom...</p>
+                <p><b>I received a reply saying the bug was low-severity + Program is not based on Money but
+                        here's the catch: I got a chance to be placed in the Hall of Fame of such a big company at the
+                        age of 19! That’s a huge achievement for me.</b></p>
+                <p>I thank my God, who gave me the strength, blessings, and the ability to learn from my failures. So
+                    keep going. Don’t stop or get discouraged. One day, your efforts will be rewarded. Keep your faith
+                    in Him, work hard, and stay consistent.</p>
 
-                <p>Curious to explore further, I attempted to change “install.php” to “delete.php” and “remove.php,” but these attempts did not yield any results. Then, I decided to try “upgrade.php,” which revealed a message stating that the database was already upgraded. This indicated that the site was using the latest version of WordPress. However, if it wasn’t up to date, it would display the WordPress version number. Since several WordPress plugins were recently found to be vulnerable, exploiting this vulnerability could provide information about the version being used and potentially allow for an upgrade without the company’s knowledge.</p>
-
-                <p>I reported this issue to the company, highlighting it as an information disclosure vulnerability. The company acknowledged the report, resolved the issue, and changed the HTTP response of the page from 200 to 401. As a reward, they granted me ₹5000.</p>
-
-                <p>This is the story of my encounter with a WordPress CMS information disclosure vulnerability. I would like to recommend to any bug bounty beginners that if your target uses WordPress, always try adding “<code>/wp/wp-admin/install.php,” “/wp-admin/install.php,” or “upgrade.php</code>” to your testing. By doing so, you can help secure the company and potentially identify vulnerabilities. Remember, not all work is driven by the pursuit of bounty; having good intentions and motives can lead to success, supported by your faith and the support of loved ones.</p>
-
-                <p>I am grateful to God, my family, and a special person who always supports me.</p>
+                <p><strong>Keep Hunting & Hacking.</strong></p>
 
                 <br>
 
-                <img src="images/1_b1Euco_BC9QTc30QhXDUTQ.webp" style="border: 2px solid black;">
+                <img src="images/HostGator.png" style="border: 2px solid black;">
 
                 <br>
 
-                <p>Thank you for reading. I am not a professional writer, but I wrote this to assist fellow bug hunters with my experience.</p>
 
                 <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99" target="_blank">https://linktr.ee/mrxfactor_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfactor_99"
+                            target="_blank">https://linktr.ee/mrxfactor_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -205,28 +211,28 @@
                      *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
                      *  https://disqus.com/admin/universalcode/#configuration-variables
                      */
-                    
+
                     var disqus_config = function () {
                         // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
+                        this.page.url = PAGE_URL;
+
                         // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.identifier = PAGE_IDENTIFIER;
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
                         var d = document, s = d.createElement('script');
-                        
+
                         // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
