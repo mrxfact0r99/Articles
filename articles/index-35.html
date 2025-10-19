@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How I Got Listed in Sorare Web 3.0 Hall of Fame at HackerOne" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>How I Got Hall Of Fame In Sorare Web 3.0 At Hackerone ⚡</title>
+
+    <!-- FontAwesome -->
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <!-- Highlight.js -->
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <!-- Theme CSS -->
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <!-- Google Font -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+    <style>
+        body { margin: 0; font-family: 'Roboto', sans-serif; background-color: #f8f9fa; }
+        .main-wrapper { display: flex; justify-content: center; padding: 20px; }
+        .container { max-width: 820px; background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 0 20px rgba(0,0,0,0.05); }
+        .blog-post-header .title { font-size: 2rem; text-align: center; margin-bottom: 1rem; }
+        .meta { font-size: 0.95rem; color: #666; text-align: center; margin-bottom: 1rem; }
+        .blog-post-body p { line-height: 1.7; font-size: 1rem; margin-bottom: 1rem; }
+        h3 { color: #333; }
+        a { color: #007bff; text-decoration: none; }
+        ul { padding-left: 1.25rem; }
+        pre { background-color: #f1f1f1; padding: 12px; border-radius: 6px; overflow-x: auto; white-space: pre-wrap; word-break: break-all; }
+        .small { font-size: 0.9rem; color: #555; }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">How I Got Hall Of Fame In Sorare Web 3.0 At Hackerone ⚡</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Aug 20, 2025</span>
+                    <span class="time">4 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers! 👋</i></p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/40692736.png" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <p>I hope you all are well. Today I’m sharing a short bug bounty story about how I found a resource-consumption (DoS) issue on <strong>Sorare</strong> — and later got the reputation points and my name listed in their Web 3.0 Hall of Fame on HackerOne. 🚀</p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/Sorare_HoF_Hackerone.png" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+                <h3>About Sorare 🌐</h3>
+                <p>Sorare is a global fantasy football platform that mixes fantasy leagues, digital trading cards, and blockchain (NFT) technology. It’s an interesting target because many endpoints serve user and NFT-related data, and availability is important for the platform’s user experience.</p>
+
+                <h3>What I Found 🔍</h3>
+                <p>While browsing Sorare’s public web endpoints, I noticed an endpoint that accepted very long URL path segments. By sending a request with an extremely long path component, the server responded slowly and eventually returned HTTP <strong>503 Service Unavailable</strong> — indicating resource exhaustion on that endpoint. This looked like a classic resource-consumption (DoS) condition caused by unbounded input handling.</p>
+
+                <p>Here is a trimmed and safe-to-read representation of the request I used to reproduce the behaviour (the real request contained a very long repeated segment):</p>
+
+                <pre>
+GET /api/v1/users/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa...
+Host: etc.sorare.com
+User-Agent: Mozilla/5.0 (X11; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/115.0
+Accept: ...
+Accept-Encoding: gzip, deflate, br
+Connection: close
+</pre>
+
+                <p class="small">Note: above is intentionally shortened for readability. The actual test used a much longer repeated path segment which triggered the resource consumption behaviour and led to 503 responses from the server.</p>
+
+                <h3>Response Observed</h3>
+                <p>When the long request was sent, the endpoint returned <strong>503</strong> and the service became temporarily unavailable for that route. Repeating large numbers of such requests increased load and caused degraded responses — a denial of service risk for the platform if an attacker automated it.</p>
+
+                <h3>Responsible Disclosure & Outcome ✅</h3>
+                <p>I reported the issue via Sorare’s HackerOne program with a clear, responsible disclosure: description, reproduction steps (kept high-level and responsible), and recommended mitigation (validate and limit URL path segment length; rate-limit and add input size checks). The Sorare engineering team acknowledged the report and validated the issue.</p>
+
+                <p>Sorare later listed my contribution in their Web 3.0 Hall of Fame on HackerOne — that was a proud moment. 🙏 I’m grateful they took the report seriously and fixed the underlying input handling so the endpoint could no longer be abused for resource exhaustion.</p>
+
+                <h3>What You Can Learn</h3>
+                <ul>
+                    <li>Always validate and limit input size on the server side (path segments, headers, bodies).</li>
+                    <li>Implement rate-limiting and proper error handling to avoid returning server errors that indicate exhausted resources.</li>
+                    <li>When reporting, be responsible: provide enough detail to reproduce but avoid publishing exploit scripts or exact attack automation publicly.</li>
+                </ul>
+
+                <p>If you have questions about responsible disclosure, fuzzing techniques (high-level), or how to write a clear HackerOne report — feel free to ask. I’m happy to help or clarify. 🤝</p>
+
+                <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
+
+            </div>
+            <h3 class="mt-5 mb-3">🔗 Handles:</h3>
+                <ul>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                </ul>
+            </div>
+            <div style="text-align: center; margin: 2rem 0;">
+                <a href="../index.html" style="
+                    display: inline-block;
+                    padding: 0.75rem 1.5rem;
+                    background-color: #007bff;
+                    color: white;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    font-weight: 500;
+                    font-family: 'Roboto', sans-serif;
+                    transition: background-color 0.3s ease;
+                " onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+                    ← Back To Homepage
+                </a>
+            </div>
+            
+            <div class="blog-comments-section">
+                <div id="disqus_thread"></div>
+                <script>
+                    var disqus_config = function () {
+                        this.page.url = PAGE_URL;  
+                        this.page.identifier = PAGE_IDENTIFIER; 
+                    };
+                    
+                    (function() {
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://articles-8.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>
+                    Please enable JavaScript to view the 
+                    <a href="https://disqus.com/?ref_noscript" rel="nofollow">
+                        comments powered by Disqus.
+                    </a>
+                </noscript>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
