@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="How I Hacked Nokia and Got into Their Hall of Fame by  Utsavpari Gosai" />
+    <meta name="author" content=" Utsavpari Gosai" />
+    <title>How I Hacked Nokia and Got into Their Hall of Fame 🏆</title>
+
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            font-size: 0.95rem;
+            color: #666;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            margin: 0 8px;
+        }
+
+        .blog-post-body p {
+            line-height: 1.7;
+            margin-bottom: 1rem;
+            font-size: 1rem;
+        }
+
+        ul {
+            padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            margin: 1.5rem 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-wrapper">
+        <article class="container">
+            <header class="blog-post-header">
+                <h2 class="title">How I Hacked Nokia and Got into Their Hall of Fame 🏆</h2>
+                <hr />
+                <div class="meta">
+                    <span class="date">Nov 12, 2025</span>
+                    <span class="time">3 min read</span>
+                    <span class="author"> Utsavpari Gosai</span>
+                </div>
+                <hr />
+            </header>
+
+            <div class="blog-post-body">
+                <p><i>Hello Hackers,</i></p>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/images.png" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+
+
+                <p>
+                    I hope you all are doing well. Today, I have some great news to share with you all.
+                    I was officially acknowledged in <strong>Nokia’s Hall of Fame</strong> — a company
+                    whose phone was my very first mobile device.
+                    This moment was truly special and full of pride for me. 🏆
+                </p>
+
+                <p>
+                    Let me share how this journey went.
+                </p>
+
+                <p>
+                    While hunting on Nokia’s program, I encountered a very frustrating phase.
+                    Within just 1–2 months, I received around <strong>15 duplicate reports</strong>.
+                    Honestly, this is more than enough to make any bug hunter think about giving up.
+                </p>
+
+                <p>
+                    At one point, I also felt demotivated. But my best friend and the biggest hacker
+                    of the multiverse, <strong>Shiva</strong>, never allowed me to quit.
+                    He kept pushing me to try again.
+                </p>
+
+                <p>
+                    One night at around <strong>2:30 AM</strong>, I decided to give it one last try.
+                    I found a potential issue, submitted the report, and… boom 💥 —
+                    it was <strong>accepted</strong>.
+                </p>
+
+                <h3>Vulnerability Type</h3>
+                <p>
+                    The issue was a <strong>Security Misconfiguration</strong>.
+                    This type of bug is often ignored by companies or considered non-impactful,
+                    but acceptance depends on how well you explain the risk and validation logic.
+                </p>
+
+                <h3>Steps to Reproduce</h3>
+                <div class="code-block">
+                    1. Go to the Sign-Up page<br>
+                    2. Fill in all required details and check the “Accept Terms & Conditions” box<br>
+                    3. Intercept the request using Burp Suite<br>
+                    4. Modify the T&C parameter (remove it or change true to false)<br>
+                    5. Forward the request
+                </div>
+
+                <p>
+                    <strong>Result:</strong><br>
+                    If the account is created successfully without accepting the Terms & Conditions,
+                    the vulnerability exists.
+                    If the server rejects the request or asks to accept the T&C, then it is properly validated.
+                </p>
+
+                <h3>Impact</h3>
+                <ul>
+                    <li>Users can bypass the company’s Terms & Conditions</li>
+                    <li>No server-side validation is enforced</li>
+                    <li>Validation exists only on the client side</li>
+                    <li>This leads to legal and compliance risks for the organization</li>
+                </ul>
+
+                <p>
+                    This small but impactful issue helped me secure a place in
+                    <strong>Nokia’s Hall of Fame</strong>.
+                </p>
+
+                Hall Of Fame: <a href="https://www.nokia.com/notices/responsible-disclosure/">https://www.nokia.com/notices/responsible-disclosure/</a>
+
+                <div style="text-align: center; margin: 20px 0;">
+                    <img src="images/NI.jpeg" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                </div>
+            
+
+
+                <p>
+                    I would like to give special thanks to my Best Friend ❤️ and the biggest hacker of the multiverse 🌌
+                    <strong>Shiva 🕉️</strong> for motivating me during my lowest phase
+                    and never letting me give up. 🙌
+                </p>
+
+                <p>
+                    <strong>Thank You,<br>
+                        MR.X FACTOR 🚀</strong>
+                </p>
+
+                <h3>🔗 Connect With Me</h3>
+                <ul>
+                    <li>
+                        Linktree:
+                        <a href="https://linktr.ee/mrxfact0r_99" target="_blank">
+                            https://linktr.ee/mrxfact0r_99
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </article>
+    </div>
+</body>
+
+</html>
