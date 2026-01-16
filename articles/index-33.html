@@ -104,24 +104,23 @@
                     ← Back To Homepage
                 </a>
             </div>
-            
+
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
                     var disqus_config = function () {
-                        this.page.url = PAGE_URL;  
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+                        this.page.identifier = "AHF";
                     };
-                    
-                    (function() {
+
+                    (function () {
                         var d = document, s = d.createElement('script');
                         s.src = 'https://articles-8.disqus.com/embed.js';
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
-                <noscript>
-                    Please enable JavaScript to view the 
+                <noscript>Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
@@ -129,6 +128,11 @@
             </div>
         </article>
     </div>
+
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
 </body>
 
 </html>
