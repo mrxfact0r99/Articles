@@ -4,19 +4,20 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="How I Got Acknowledged in Google’s Hall of Fame by MR.X FACTOR" />
-    <meta name="author" content="Utsavpari Gosai" />
-    <title>How I Got Acknowledged in Google’s Hall of Fame 🏅</title>
+    <meta name="description" content="How I Acknowledged From BlackBerry 2nd Time.....🏅" />
+    <meta name="author" content=" Utsavpari Gosai" />
+    <title>How I Acknowledged From BlackBerry 2nd Time.....🏅</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
-    <!-- Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             margin: 0;
             font-family: 'Roboto', sans-serif;
@@ -30,8 +31,9 @@
         }
 
         .container {
+            width: 100%;
             max-width: 820px;
-            background: #fff;
+            background-color: #fff;
             padding: 2rem;
             border-radius: 12px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
@@ -50,23 +52,36 @@
             margin-bottom: 1rem;
         }
 
+        .meta span {
+            margin: 0 8px;
+        }
+
         .blog-post-body p {
             line-height: 1.7;
-            font-size: 1rem;
             margin-bottom: 1rem;
-        }
-
-        h3 {
-            color: #333;
-        }
-
-        a {
-            color: #007bff;
-            text-decoration: none;
+            font-size: 1rem;
         }
 
         ul {
             padding-left: 1.25rem;
+        }
+
+        ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            color: #333;
+        }
+
+        .code-block {
+            background-color: #f7f7f7;
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            font-family: monospace;
+            margin: 1.5rem 0;
         }
 
         a {
@@ -80,96 +95,104 @@
     <div class="main-wrapper">
         <article class="container">
             <header class="blog-post-header">
-                <h2 class="title">How I Got Acknowledged in Google’s Hall of Fame 🏅</h2>
+                <h2 class="title">How I Acknowledged From BlackBerry 2nd Time.....🏅</h2>
                 <hr />
                 <div class="meta">
-                    <span class="date">Jan 16, 2026</span>
-                    <span class="time">3 min read</span>
-                    <span class="author">Utsavpari Gosai</span>
+                    <span class="date">Jan 18, 2026</span>
+                    <span class="time">2 min read</span>
+                    <span class="author"> Utsavpari Gosai</span>
                 </div>
                 <hr />
             </header>
 
             <div class="blog-post-body">
-                <p><i>Hi Everyone 👋</i></p>
+                <p><i>Hello Hackers,</i></p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/google-logo.png"
+                    <img src="images/blackb.jpg"
                         style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="Google Hall of Fame">
+                        alt="Blog Image">
                 </div>
 
-                <p>I hope you all are doing well and continuing your hard work to help secure our digital world 🌐🔐.
+                <p>
+                    I hope you all are doing great. Today, I’m excited to share a short story about
+                    how I got listed on <strong>BlackBerry’s Hall of Fame 2nd Time</strong>. 🏅
+                    Let’s get started!
                 </p>
 
-                <p>Today, I’m extremely happy to share that a long-cherished dream has finally come true I’ve been
-                    officially <strong>acknowledged by Google and listed in Google’s Security Hall of
-                        Fame</strong> 🏆</p>
-
-                <p>This achievement is not mine alone. I owe my deepest gratitude to <strong>The Biggest Hacker of This
-                        Multiverse, Shiva 🕉️</strong>, my <strong>best friend & life partner ❤️</strong>, and my
-                    <strong>family 👨‍👨‍👦‍👦</strong> for their constant support, blessings, and belief in me. Without
-                    you all, this wouldn’t have been possible.
+                <p>
+                    First of all, I want to clarify that BlackBerry does not allow public disclosure
+                    of vulnerabilities, even after they are patched. Because of this policy,
+                    I won’t be sharing the exact technical details of the bug.
                 </p>
 
-                <h3>🚀 The Journey</h3>
+                <p>
+                    However, I can definitely share some <strong>valuable tips</strong> that helped me
+                    during this process and might help you improve your bug hunting journey.
+                </p>
 
-                <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/Re2.jpeg"
-                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="Google Hall of Fame">
-                </div>
-
-                <p>I can’t disclose the complete technical details of the vulnerability yet, as the fix has not been
-                    fully deployed. However, here’s a small but important takeaway for fellow researchers 💡:</p>
+                <h3>Key Takeaways from This Finding</h3>
 
                 <ul>
-                    <li>Always test authentication and session handling thoroughly.</li>
-                    <li>Broken authentication and session-related flaws often hide serious impact.</li>
-                    <li>Even small logic gaps can lead to critical security issues.</li>
+                    <li>
+                        Check the all endpoints wich reflecting user input
+                    </li>
+
+                    <li>
+                        There is high chance to get vulnerability of <strong>Injection</strong>
+                    </li>
                 </ul>
 
-                <p>The journey to this acknowledgment was far from easy. Before this success, I faced around <strong>17
-                        report rejections</strong> from Google. Each rejection was a learning experience and instead
-                    of giving up, I chose to improve, learn, and try again.</p>
+                <p>
+                    In many cases, success doesn’t come from complex exploits,
+                    but from patience, consistency, and attention to detail.
+                    Never skip the basics.
 
-
-
-                <p>In the end, persistence paid off 💪</p>
+                </p>
 
                 <p>
                     Hall Of Fame:
-                    <a href="https://bughunters.google.com/leaderboard/honorable-mentions">
-                        https://bughunters.google.com/leaderboard/honorable-mentions
+                    <a href="https://www.blackberry.com/us/en/services/blackberry-product-security-incident-response">
+                        https://www.blackberry.com/us/en/services/blackberry-product-security-incident-response
                     </a>
                 </p>
+
+
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/GHOF.png"
+                    <img src="images/bb2.jpeg"
                         style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="Google Hall of Fame">
+                        alt="Blog Image">
                 </div>
 
-                <h3>🕉️ A Message to Fellow Hackers</h3>
+                <p>
+                    <strong>Final Thought:</strong>
+                    Keep learning, keep testing, and never underestimate
+                    the impact of minor security issues. They matter more than you think. 🧠
+                </p>
 
+                <p>
+                    I would also like to give special thanks to my Best Friend ❤️ and
+                    one of the most talented hackers I know,
+                    <strong>Shiva 🕉️</strong> the biggest hacker of the multiverse 🌌
+                    for constant support and motivation throughout this journey.
+                </p>
+
+                <p>
+                    <strong>Thank You,<br>
+                        MR.X FACTOR 🚀
+                    </strong>
+                </p>
+
+                <h3>🔗 Handles:</h3>
                 <ul>
-                    <li>Keep faith in yourself and in him 🕉️</li>
-                    <li>Stay consistent and disciplined.</li>
-                    <li>Never stop learning from rejections.</li>
-                    <li>Use your skills responsibly to protect users worldwide 🌍</li>
-                </ul>
-
-                <p>If anyone has any questions or wants to connect, feel free to reach out to me through the social
-                    media links below 🔗</p>
-
-                <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
-
-                <h3 class="mt-5 mb-3">🔗 Handles:</h3>
-                <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
-                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>
+                        Linktree:
+                        <a href="https://linktr.ee/mrxfact0r_99" target="_blank">
+                            https://linktr.ee/mrxfact0r_99
+                        </a>
+                    </li>
                 </ul>
             </div>
-
             <div style="text-align: center; margin: 2rem 0;">
                 <a href="../index.html" style="
                     display: inline-block;
@@ -191,7 +214,7 @@
                 <script>
                     var disqus_config = function () {
                         this.page.url = window.location.href;
-                        this.page.identifier = "GHF";
+                        this.page.identifier = "BBHF02";
                     };
 
                     (function () {
