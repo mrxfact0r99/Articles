@@ -8,14 +8,10 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>WordPress Websites Hacking Tips</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
 
-    <!-- Custom Google Font (Replace with your preferred font) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
     <style>
@@ -115,7 +111,6 @@
             color: #333;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 padding: 1.2rem;
@@ -175,7 +170,9 @@
 
                 <br>
 
-                <p>How are you? Today, I am going to share a tip on finding vulnerabilities in WordPress websites. This can be useful for pentesting WordPress websites, especially when you identify that a website is using WordPress in the backend (you can use tools like Wappalyzer for this).</p>
+                <p>How are you? Today, I am going to share a tip on finding vulnerabilities in WordPress websites. This
+                    can be useful for pentesting WordPress websites, especially when you identify that a website is
+                    using WordPress in the backend (you can use tools like Wappalyzer for this).</p>
 
                 <p><strong>Here are the steps:</strong></p>
 
@@ -183,7 +180,8 @@
                     <li>Open any image of the website in a new tab.</li>
                     <li>Remove all content from the URL and enter either of these:</li>
                     <ul>
-                        <li><code>wp-json/wp/v2/users</code> — <a href="https://example.com/wp-json/wp/v2/users" target="_blank">https://example.com/wp-json/wp/v2/users</a></li>
+                        <li><code>wp-json/wp/v2/users</code> — <a href="https://example.com/wp-json/wp/v2/users"
+                                target="_blank">https://example.com/wp-json/wp/v2/users</a></li>
                     </ul>
                     <li>This may reveal various user details such as ID, name, avatars, etc.</li>
                     <li>Additionally, you can try:</li>
@@ -192,20 +190,27 @@
                         <li><code>/wp/wp-admin/upgrade.php</code></li>
                         <li><code>/wp-admin/install.php</code></li>
                     </ul>
-                    <li>Checking these URLs might provide information about the status of the database and WordPress.</li>
+                    <li>Checking these URLs might provide information about the status of the database and WordPress.
+                    </li>
                 </ul>
 
-                <p>If the results resemble what is shown in the image, you can report it as information disclosure. This is valuable for understanding user details, gaining insights into the WordPress version, and the backend situation. Report the bug, and you might receive an awesome bounty.</p>
+                <p>If the results resemble what is shown in the image, you can report it as information disclosure. This
+                    is valuable for understanding user details, gaining insights into the WordPress version, and the
+                    backend situation. Report the bug, and you might receive an awesome bounty.</p>
 
-                <p>In my early days, I wrote a detailed article about my experience with this technique. You can read it <a href="articles/index-04.html" target="_blank">HERE</a>.</p>
+                <p>In my early days, I wrote a detailed article about my experience with this technique. You can read it
+                    <a href="articles/index-04.html" target="_blank">HERE</a>.</p>
 
-                <p><strong>Note:</strong> Some websites may accept this bug, while others might reject it, claiming it is not a bug. Be aware before reporting. I share this experience for beginners in the field who are eager to learn something new and are on the lookout for their first bug and bounty.</p>
+                <p><strong>Note:</strong> Some websites may accept this bug, while others might reject it, claiming it
+                    is not a bug. Be aware before reporting. I share this experience for beginners in the field who are
+                    eager to learn something new and are on the lookout for their first bug and bounty.</p>
 
                 <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -226,45 +231,34 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "06";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

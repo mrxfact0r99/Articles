@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Domain IP Mismatch + Information Disclosure + Content Spoofing Leads to $100 by Utsavpari Gosai" />
+    <meta name="description"
+        content="Domain IP Mismatch + Information Disclosure + Content Spoofing Leads to $100 by Utsavpari Gosai" />
     <meta name="author" content="Utsavpari Gosai" />
     <title>Domain IP Mismatch + Info Disclosure + Content Spoofing Leads to $100</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
-    <!-- Custom Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
     <style>
@@ -109,7 +106,6 @@
             overflow-x: auto;
         }
 
-        /* Responsive */
         @media (max-width: 768px) {
             .container {
                 padding: 1.2rem;
@@ -163,19 +159,35 @@
             <div class="blog-post-body">
                 <p><i>Hello Hackers,</i></p>
 
-                <p>I hope you are all doing well. It's been a long time since we last connected, and I apologize for that. My studies have been keeping me busy. As I mentioned in a previous article, I am pursuing an MCA, and my studies, college projects, assignments, exams, and my ethical hacking and pentesting internships have occupied a lot of my time.</p>
+                <p>I hope you are all doing well. It's been a long time since we last connected, and I apologize for
+                    that. My studies have been keeping me busy. As I mentioned in a previous article, I am pursuing an
+                    MCA, and my studies, college projects, assignments, exams, and my ethical hacking and pentesting
+                    internships have occupied a lot of my time.</p>
 
-                <p>However, I am pleased to share that my second-semester exams are over, and the results are out. I passed with first-class distinction, achieving a <strong>9.4 SGPA</strong>. Now that I have some free time, I can return to bug hunting and writing articles. So, let's dive in! 💻✨</p>
+                <p>However, I am pleased to share that my second-semester exams are over, and the results are out. I
+                    passed with first-class distinction, achieving a <strong>9.4 SGPA</strong>. Now that I have some
+                    free time, I can return to bug hunting and writing articles. So, let's dive in! 💻✨</p>
 
-                <p>After finishing my college exams, I grabbed my laptop, opened Kali Linux, and re-entered my world of hacking. Although I can't disclose the site's name, I'll refer to it as <strong>target.com</strong>. Using the Subfinder tool, I found a subdomain named <code>logintest1.target.com</code>. Visiting this subdomain, I initially found nothing.</p>
+                <p>After finishing my college exams, I grabbed my laptop, opened Kali Linux, and re-entered my world of
+                    hacking. Although I can't disclose the site's name, I'll refer to it as <strong>target.com</strong>.
+                    Using the Subfinder tool, I found a subdomain named <code>logintest1.target.com</code>. Visiting
+                    this subdomain, I initially found nothing.</p>
 
-                <p>Then, I performed directory brute-forcing using the <strong>Dirsearch</strong> tool. I discovered an error message at <code>/test</code>. When I visited this, I encountered a <strong>.NET error</strong> disclosing the .NET version used by the server, along with internal directory information, paths, and other sensitive data.</p>
+                <p>Then, I performed directory brute-forcing using the <strong>Dirsearch</strong> tool. I discovered an
+                    error message at <code>/test</code>. When I visited this, I encountered a <strong>.NET
+                        error</strong> disclosing the .NET version used by the server, along with internal directory
+                    information, paths, and other sensitive data.</p>
 
-                <p>The <code>/test</code> directory also reflected data. I first attempted an XSS attack, but the input was properly encoded. However, I remembered that <strong>content spoofing</strong> wasn’t listed as out-of-scope, so I included it in my report.</p>
+                <p>The <code>/test</code> directory also reflected data. I first attempted an XSS attack, but the input
+                    was properly encoded. However, I remembered that <strong>content spoofing</strong> wasn’t listed as
+                    out-of-scope, so I included it in my report.</p>
 
-                <p>Next, I searched Censys for IPs of the target and found a mismatch between the domain and its actual IP—classic <strong>domain IP mismatch</strong>. Without delay, I documented everything, wrote a detailed report with PoCs, and submitted it.</p>
+                <p>Next, I searched Censys for IPs of the target and found a mismatch between the domain and its actual
+                    IP—classic <strong>domain IP mismatch</strong>. Without delay, I documented everything, wrote a
+                    detailed report with PoCs, and submitted it.</p>
 
-                <p>After 20 to 25 days of evaluation, the program <strong>accepted</strong> the report, resolved the issue, and awarded me a <strong>$100 bounty</strong>! 🎉</p>
+                <p>After 20 to 25 days of evaluation, the program <strong>accepted</strong> the report, resolved the
+                    issue, and awarded me a <strong>$100 bounty</strong>! 🎉</p>
 
                 <br>
 
@@ -194,7 +206,8 @@
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -215,45 +228,34 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "11";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

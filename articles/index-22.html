@@ -8,11 +8,8 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>$$ Digit Bounty Lesson 💰</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
@@ -161,14 +158,21 @@
             <div class="blog-post-body">
                 <p><i>Hello Hackers,</i></p>
 
-                <p>It's been a while since we last connected! Life has been a bit of a whirlwind with my MCA exams and personal challenges. I even stepped away from my role as a Security Analyst (Penetration Tester) for personal reasons. These experiences taught me invaluable lessons—especially about people, trust, and resilience.</p>
+                <p>It's been a while since we last connected! Life has been a bit of a whirlwind with my MCA exams and
+                    personal challenges. I even stepped away from my role as a Security Analyst (Penetration Tester) for
+                    personal reasons. These experiences taught me invaluable lessons—especially about people, trust, and
+                    resilience.</p>
 
                 <p><strong>But first, some good news! 🎉</strong><br>
-                I’m thrilled to share that I scored 100/100 in my MCA 3rd semester exams with a perfect 10.00 SGPA. Currently, I’m in my final semester (4th), and things are looking bright. Now, let's dive into an interesting story from my bug bounty journey.</p>
+                    I’m thrilled to share that I scored 100/100 in my MCA 3rd semester exams with a perfect 10.00 SGPA.
+                    Currently, I’m in my final semester (4th), and things are looking bright. Now, let's dive into an
+                    interesting story from my bug bounty journey.</p>
 
                 <h3>The $25 Bounty Lesson 💰</h3>
 
-                <p>About a year ago, as a beginner in bug bounty, I started applying my learning to real-world scenarios. I searched for bug bounty programs online using specific keywords. One day, I stumbled upon a WordPress website and tested a few endpoints:</p>
+                <p>About a year ago, as a beginner in bug bounty, I started applying my learning to real-world
+                    scenarios. I searched for bug bounty programs online using specific keywords. One day, I stumbled
+                    upon a WordPress website and tested a few endpoints:</p>
 
                 <div class="code-block">
                     https://target.nl/wp/wp-admin/install.php<br />
@@ -178,54 +182,78 @@
                 <h4>Vulnerability Description</h4>
 
                 <p>When I accessed the install.php endpoint, I saw this message:<br>
-                <em>“Already Installed. You appear to have already installed WordPress. To reinstall, please clear your old database tables first.”</em></p>
+                    <em>“Already Installed. You appear to have already installed WordPress. To reinstall, please clear
+                        your old database tables first.”</em>
+                </p>
 
                 <p>Similarly, on upgrade.php, it displayed:<br>
-                <em>“No Update Required. Your WordPress database is already up to date!”</em></p>
+                    <em>“No Update Required. Your WordPress database is already up to date!”</em>
+                </p>
 
-                <p>These messages exposed critical information about the site’s WordPress installation status and version.</p>
+                <p>These messages exposed critical information about the site’s WordPress installation status and
+                    version.</p>
 
                 <h4>Impact</h4>
-                <p>This information, while seemingly harmless, could be exploited by attackers or automated tools to:</p>
+                <p>This information, while seemingly harmless, could be exploited by attackers or automated tools to:
+                </p>
                 <ul>
                     <li>Gather insights into the website’s infrastructure.</li>
-                    <li>Identify vulnerabilities tied to the specific WordPress version, increasing the risk of exploitation.</li>
+                    <li>Identify vulnerabilities tied to the specific WordPress version, increasing the risk of
+                        exploitation.</li>
                 </ul>
 
                 <h4>Outcome</h4>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/1bLS_GXMAlytJhGsja_pVOA.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                    <img src="images/1bLS_GXMAlytJhGsja_pVOA.webp"
+                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
+                        alt="Blog Image">
                 </div>
 
-                <p>At the time, the company did not accept my report, labeling it as non-rewardable. I was disappointed but took it as a learning experience and moved on.</p>
+                <p>At the time, the company did not accept my report, labeling it as non-rewardable. I was disappointed
+                    but took it as a learning experience and moved on.</p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/176VqI7RtjKu_TDTF2byRYA.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                    <img src="images/176VqI7RtjKu_TDTF2byRYA.webp"
+                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
+                        alt="Blog Image">
                 </div>
 
-                <p>Fast forward one year—I received an email from the same company. They informed me that my report was in triage mode, and their developers were working to fix it. Days later, they patched the bug and rewarded me with a small bounty of $25!</p>
+                <p>Fast forward one year—I received an email from the same company. They informed me that my report was
+                    in triage mode, and their developers were working to fix it. Days later, they patched the bug and
+                    rewarded me with a small bounty of $25!</p>
 
                 <p><strong>Even though the amount wasn’t huge, the experience taught me a powerful lesson:</strong><br>
-                <em>"Never lose hope. Trust in your work, and have faith in your efforts. Results will come, even if delayed."</em></p>
+                    <em>"Never lose hope. Trust in your work, and have faith in your efforts. Results will come, even if
+                        delayed."</em>
+                </p>
 
                 <h3>A High-Impact Bug Awaiting Justice 🚨</h3>
 
-                <p>Another memorable experience involved reporting a high-impact vulnerability (account takeover without user interaction) to a major company. Their bug bounty program promised rewards ranging from $700–$1000 for such findings.</p>
+                <p>Another memorable experience involved reporting a high-impact vulnerability (account takeover without
+                    user interaction) to a major company. Their bug bounty program promised rewards ranging from
+                    $700–$1000 for such findings.</p>
 
                 <p>Here is the link about that article:<br>
-                <a href="articles/index-13.html" target="_blank">Article</a></p>
+                    <a href="articles/index-13.html" target="_blank">Article</a>
+                </p>
 
-                <p>I reported the bug, emailed their team, and even contacted the site owner—but received no response. Despite the frustration, I remain hopeful that they’ll acknowledge my report someday. If not, I trust my efforts will be rewarded elsewhere.</p>
+                <p>I reported the bug, emailed their team, and even contacted the site owner—but received no response.
+                    Despite the frustration, I remain hopeful that they’ll acknowledge my report someday. If not, I
+                    trust my efforts will be rewarded elsewhere.</p>
 
                 <h3>Key Takeaways</h3>
                 <ul>
-                    <li><strong>Don’t Lose Hope ✨</strong><br>Whether it’s a delayed response or no response at all, trust in your journey.</li>
-                    <li><strong>Trust Your Skills 💻</strong><br>Every report, whether acknowledged or not, is a step toward mastering your craft.</li>
-                    <li><strong>Have Faith in the Process 🙏</strong><br>Sometimes, results come unexpectedly—just like my $25 bounty from a report I submitted a year ago.</li>
+                    <li><strong>Don’t Lose Hope ✨</strong><br>Whether it’s a delayed response or no response at all,
+                        trust in your journey.</li>
+                    <li><strong>Trust Your Skills 💻</strong><br>Every report, whether acknowledged or not, is a step
+                        toward mastering your craft.</li>
+                    <li><strong>Have Faith in the Process 🙏</strong><br>Sometimes, results come unexpectedly—just like
+                        my $25 bounty from a report I submitted a year ago.</li>
                 </ul>
 
-                <p>That’s all for today! Let’s meet again soon with more exciting stories and lessons from the world of hacking.</p>
+                <p>That’s all for today! Let’s meet again soon with more exciting stories and lessons from the world of
+                    hacking.</p>
 
                 <p><strong>Until then, Keep Hacking, Stay Secure! 🔐</strong></p>
 
@@ -235,7 +263,8 @@
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -256,41 +285,31 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "22";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 

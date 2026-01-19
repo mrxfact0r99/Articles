@@ -142,19 +142,30 @@
             <div class="blog-post-body">
                 <p><i>Hello Hackers,</i></p>
 
-                <p>I hope you all are fine and well. So first of all, sorry for not sharing any bug hunting stories recently. Because of holidays and vacations, I was busy enjoying time with family and friends, so no stories or articles were uploaded. But now the vacation is over, so it’s back to work! 💻🎯</p>
+                <p>I hope you all are fine and well. So first of all, sorry for not sharing any bug hunting stories
+                    recently. Because of holidays and vacations, I was busy enjoying time with family and friends, so no
+                    stories or articles were uploaded. But now the vacation is over, so it’s back to work! 💻🎯</p>
 
-                <p>I am going to share with you an interesting and commonly ignored type of bug today. So let’s get started! 🐞🔍</p>
+                <p>I am going to share with you an interesting and commonly ignored type of bug today. So let’s get
+                    started! 🐞🔍</p>
 
-                <p>I began by analyzing the structure of the target web application. This step is very important and often missed by many bug hunters. While exploring, I discovered a page named <code>SupportForm.aspx</code>. It had input fields like name, email, your query, some other options, and a submit button.</p>
+                <p>I began by analyzing the structure of the target web application. This step is very important and
+                    often missed by many bug hunters. While exploring, I discovered a page named
+                    <code>SupportForm.aspx</code>. It had input fields like name, email, your query, some other options,
+                    and a submit button.</p>
 
-                <p>I usually start by sending a demo message to see how the form works. Then I tried sending blind SSRF and blind XSS payloads — but nothing worked. I assumed there was no bug and thought about moving on.</p>
+                <p>I usually start by sending a demo message to see how the form works. Then I tried sending blind SSRF
+                    and blind XSS payloads — but nothing worked. I assumed there was no bug and thought about moving on.
+                </p>
 
-                <p>But suddenly, while I was eating 🍽️, an idea hit me 💡 — what happens if I submit the form using any random email address?</p>
+                <p>But suddenly, while I was eating 🍽️, an idea hit me 💡 — what happens if I submit the form using any
+                    random email address?</p>
 
                 <p>I tried it, and surprisingly, it got submitted and accepted successfully ✅.</p>
 
-                <p>Then I wondered — why not try sending it using an admin or company email address? I used OSINT to find some company emails and submitted the form again. And guess what? It worked! The message was sent successfully using their internal email address. 📬</p>
+                <p>Then I wondered — why not try sending it using an admin or company email address? I used OSINT to
+                    find some company emails and submitted the form again. And guess what? It worked! The message was
+                    sent successfully using their internal email address. 📬</p>
 
                 <h3>So what is the bug?</h3>
 
@@ -167,27 +178,37 @@
                 <p><strong>This Means:</strong></p>
 
                 <ul>
-                    <li>Attackers can impersonate company employees or customers and submit misleading or malicious requests (like asking for password resets, admin access, or sensitive info).</li>
-                    <li>If internal teams respond to spoofed messages without verifying the sender, attackers might receive confidential information.</li>
-                    <li>Combined with user enumeration, attackers can target known employees or customers with social engineering.</li>
+                    <li>Attackers can impersonate company employees or customers and submit misleading or malicious
+                        requests (like asking for password resets, admin access, or sensitive info).</li>
+                    <li>If internal teams respond to spoofed messages without verifying the sender, attackers might
+                        receive confidential information.</li>
+                    <li>Combined with user enumeration, attackers can target known employees or customers with social
+                        engineering.</li>
                     <li>This seriously undermines the integrity of the support system. ⚠️</li>
                 </ul>
 
-                <p>I reported it with this mindset, and the report was accepted in 10 days. I received a $50 reward. 🤑</p>
+                <p>I reported it with this mindset, and the report was accepted in 10 days. I received a $50 reward. 🤑
+                </p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/WhatsApp Image 2025-06-09 at 11.30.00 AM.jpeg" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                    <img src="images/WhatsApp Image 2025-06-09 at 11.30.00 AM.jpeg"
+                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
+                        alt="Blog Image">
                 </div>
 
-                <p><strong>The Takeaway:</strong> Bugs are everywhere — you just need to think like an attacker or hacker. Understand how the company works, and you’ll find vulnerabilities that many others miss. 🧠💥</p>
+                <p><strong>The Takeaway:</strong> Bugs are everywhere — you just need to think like an attacker or
+                    hacker. Understand how the company works, and you’ll find vulnerabilities that many others miss.
+                    🧠💥</p>
 
-                <p>That’s all for today. Thank you for reading! If you have any questions or need help, feel free to reach out via the link below.</p>
+                <p>That’s all for today. Thank you for reading! If you have any questions or need help, feel free to
+                    reach out via the link below.</p>
 
                 <p><strong>Thank You,<br>MR.X FACTOR 🚀</strong></p>
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
 
@@ -212,7 +233,7 @@
                 <script>
                     var disqus_config = function () {
                         this.page.url = window.location.href;
-                        this.page.identifier = "bughunter_50_story";
+                        this.page.identifier = "28";
                     };
 
                     (function () {
@@ -222,7 +243,7 @@
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
-                <noscript>Please enable JavaScript to view the 
+                <noscript>Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>

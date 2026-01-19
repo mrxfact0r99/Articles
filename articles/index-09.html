@@ -8,11 +8,8 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>How I Ethically Hacked GSRTC and Reported Vulnerabilities</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
@@ -139,31 +136,47 @@
 
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/16i2x4Hx3d6IdhUEsLWg4kw.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                    <img src="images/16i2x4Hx3d6IdhUEsLWg4kw.webp"
+                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
+                        alt="Blog Image">
                 </div>
-                
-                <p>I trust you are all well and continuously expanding your knowledge. Today, I share a fascinating bug that I recently discovered in GSRTC (Gujarat State Road Transport Corporation).</p>
 
-                <p>The story unfolds as my father needed to attend a wedding in Kutch, Bhuj, Gujarat. He requested me to book an online bus ticket through the GSRTC app. Little did I know that this simple task would lead me to uncover two significant bugs — one in their website and another in the mobile application. For security reasons, I won’t disclose the specifics of the mobile application bug.</p>
+                <p>I trust you are all well and continuously expanding your knowledge. Today, I share a fascinating bug
+                    that I recently discovered in GSRTC (Gujarat State Road Transport Corporation).</p>
 
-                <p>My purpose in writing this article is to share my experience, promote awareness, and encourage others to learn from these incidents to contribute to a more secure internet and country.</p>
+                <p>The story unfolds as my father needed to attend a wedding in Kutch, Bhuj, Gujarat. He requested me to
+                    book an online bus ticket through the GSRTC app. Little did I know that this simple task would lead
+                    me to uncover two significant bugs — one in their website and another in the mobile application. For
+                    security reasons, I won’t disclose the specifics of the mobile application bug.</p>
+
+                <p>My purpose in writing this article is to share my experience, promote awareness, and encourage others
+                    to learn from these incidents to contribute to a more secure internet and country.</p>
 
                 <h3>The Bugs:</h3>
                 <ul>
-                    <li>In the GSRTC app, I discovered that any hacker could book an entire bus without payment for 15 minutes. All that was required was three mobile phones, and they could exploit this vulnerability.</li>
-                    <li>The second bug is both intriguing and critical — an IDOR (Insecure Direct Object Reference) bug. It allowed a potential hacker to access all details of users who booked tickets through the GSRTC app or website. I won’t disclose the full details for security purposes.</li>
+                    <li>In the GSRTC app, I discovered that any hacker could book an entire bus without payment for 15
+                        minutes. All that was required was three mobile phones, and they could exploit this
+                        vulnerability.</li>
+                    <li>The second bug is both intriguing and critical — an IDOR (Insecure Direct Object Reference) bug.
+                        It allowed a potential hacker to access all details of users who booked tickets through the
+                        GSRTC app or website. I won’t disclose the full details for security purposes.</li>
                 </ul>
 
-                <p>I promptly reported these bugs to GSRTC, and I hope they will patch these vulnerabilities as soon as possible.</p>
+                <p>I promptly reported these bugs to GSRTC, and I hope they will patch these vulnerabilities as soon as
+                    possible.</p>
 
                 <h3>Takeaways:</h3>
-                <p>Always be vigilant and thorough in testing while engaging in any online transactions, whether on a website or application. Test interesting parameters and inputs, and if you discover anything suspicious, report it ethically as an ethical hacker (white hat hacker). This helps secure our online world from potential threats posed by black hat hackers.</p>
+                <p>Always be vigilant and thorough in testing while engaging in any online transactions, whether on a
+                    website or application. Test interesting parameters and inputs, and if you discover anything
+                    suspicious, report it ethically as an ethical hacker (white hat hacker). This helps secure our
+                    online world from potential threats posed by black hat hackers.</p>
 
                 <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -184,45 +197,34 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "09";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

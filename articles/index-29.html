@@ -9,11 +9,8 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>How I Hacked the Dutch Government.....🧑‍💻🇳🇱</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
@@ -110,7 +107,6 @@
             overflow-x: auto;
         }
 
-        /* Responsive Styling */
         @media (max-width: 768px) {
             .container {
                 padding: 1.2rem;
@@ -194,7 +190,8 @@
                 <h3>🔍 Reconnaissance Phase</h3>
                 <p>I started by exploring the public scope of Dutch Government domains:<br>
                     <a href="https://gist.github.com/R0X4R/81e6c50c091a20b060afe5c259b58cfa" target="_blank">
-                        Dutch Government Subdomain Scope</a></p>
+                        Dutch Government Subdomain Scope</a>
+                </p>
 
                 <p>I picked one domain and began manual subdomain discovery using browser tools like Wappalyzer.</p>
 
@@ -206,7 +203,8 @@
                     performed directory brute-forcing using:</p>
 
                 <div class="code-block">
-                    dirsearch -e conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,log,xml,js,json
+                    dirsearch -e
+                    conf,config,bak,backup,swp,old,db,sql,asp,aspx,aspx~,asp~,py,py~,rb,rb~,php,php~,bak,bkp,cache,cgi,conf,csv,html,inc,jar,js,json,jsp,jsp~,lock,log,rar,old,sql,sql.gz,sql.zip,sql.tar.gz,sql~,swp,swp~,tar,tar.bz2,tar.gz,txt,wadl,zip,log,xml,js,json
                     -u a.abc.nl -w /usr/share/wordlists/nginx.txt -i 200
                 </div>
 
@@ -232,7 +230,8 @@
                 </p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/Letter of Appreciation - Utsavpari Gosai_page-0001.jpg" alt="Letter of Appreciation">
+                    <img src="images/Letter of Appreciation - Utsavpari Gosai_page-0001.jpg"
+                        alt="Letter of Appreciation">
                 </div>
 
                 <div style="text-align: center; margin: 20px 0;">
@@ -283,7 +282,7 @@
                 <script>
                     var disqus_config = function () {
                         this.page.url = window.location.href;
-                        this.page.identifier = "dutch_government_hack_story";
+                        this.page.identifier = "29";
                     };
                     (function () {
                         var d = document, s = d.createElement('script');

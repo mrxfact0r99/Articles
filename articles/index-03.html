@@ -8,14 +8,10 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>3rd Bounty ₹5000: WordPress Information Disclosure From Upstox</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
 
-    <!-- Custom Google Font (You can replace this with your own font link) -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
     <style>
@@ -94,7 +90,6 @@
             margin-bottom: 0.5rem;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 padding: 1.2rem;
@@ -146,21 +141,40 @@
             </header>
 
             <div class="blog-post-body">
-            
+
                 <p><i>Hello Hackers,</i></p>
 
                 <img src="images/202411041619111.jpg" style="border: 2px solid black;">
 
 
-                <p>Today I will share with you my third bounty, which involved information disclosure. So, without wasting time, let’s get started.</p>
+                <p>Today I will share with you my third bounty, which involved information disclosure. So, without
+                    wasting time, let’s get started.</p>
 
-                <p>I was hunting on a program that used WordPress. To begin, I obtained a WordPress-based wordlist from the PayloadAllTheThings GitHub repository and started fuzzing. I encountered several 404 and 403 errors, along with some false positives. However, I then stumbled upon something interesting: <code>https://example.com/wp/wp-admin/install.php</code>. When I visited this URL, it displayed a message from WordPress stating that the WordPress installation was already complete and provided a link to log in.</p>
+                <p>I was hunting on a program that used WordPress. To begin, I obtained a WordPress-based wordlist from
+                    the PayloadAllTheThings GitHub repository and started fuzzing. I encountered several 404 and 403
+                    errors, along with some false positives. However, I then stumbled upon something interesting:
+                    <code>https://example.com/wp/wp-admin/install.php</code>. When I visited this URL, it displayed a
+                    message from WordPress stating that the WordPress installation was already complete and provided a
+                    link to log in.</p>
 
-                <p>Curious to explore further, I attempted to change “install.php” to “delete.php” and “remove.php,” but these attempts did not yield any results. Then, I decided to try “upgrade.php,” which revealed a message stating that the database was already upgraded. This indicated that the site was using the latest version of WordPress. However, if it wasn’t up to date, it would display the WordPress version number. Since several WordPress plugins were recently found to be vulnerable, exploiting this vulnerability could provide information about the version being used and potentially allow for an upgrade without the company’s knowledge.</p>
+                <p>Curious to explore further, I attempted to change “install.php” to “delete.php” and “remove.php,” but
+                    these attempts did not yield any results. Then, I decided to try “upgrade.php,” which revealed a
+                    message stating that the database was already upgraded. This indicated that the site was using the
+                    latest version of WordPress. However, if it wasn’t up to date, it would display the WordPress
+                    version number. Since several WordPress plugins were recently found to be vulnerable, exploiting
+                    this vulnerability could provide information about the version being used and potentially allow for
+                    an upgrade without the company’s knowledge.</p>
 
-                <p>I reported this issue to the company, highlighting it as an information disclosure vulnerability. The company acknowledged the report, resolved the issue, and changed the HTTP response of the page from 200 to 401. As a reward, they granted me ₹5000.</p>
+                <p>I reported this issue to the company, highlighting it as an information disclosure vulnerability. The
+                    company acknowledged the report, resolved the issue, and changed the HTTP response of the page from
+                    200 to 401. As a reward, they granted me ₹5000.</p>
 
-                <p>This is the story of my encounter with a WordPress CMS information disclosure vulnerability. I would like to recommend to any bug bounty beginners that if your target uses WordPress, always try adding “<code>/wp/wp-admin/install.php,” “/wp-admin/install.php,” or “upgrade.php</code>” to your testing. By doing so, you can help secure the company and potentially identify vulnerabilities. Remember, not all work is driven by the pursuit of bounty; having good intentions and motives can lead to success, supported by your faith and the support of loved ones.</p>
+                <p>This is the story of my encounter with a WordPress CMS information disclosure vulnerability. I would
+                    like to recommend to any bug bounty beginners that if your target uses WordPress, always try adding
+                    “<code>/wp/wp-admin/install.php,” “/wp-admin/install.php,” or “upgrade.php</code>” to your testing.
+                    By doing so, you can help secure the company and potentially identify vulnerabilities. Remember, not
+                    all work is driven by the pursuit of bounty; having good intentions and motives can lead to success,
+                    supported by your faith and the support of loved ones.</p>
 
                 <p>I am grateful to God, my family, and a special person who always supports me.</p>
 
@@ -170,13 +184,15 @@
 
                 <br>
 
-                <p>Thank you for reading. I am not a professional writer, but I wrote this to assist fellow bug hunters with my experience.</p>
+                <p>Thank you for reading. I am not a professional writer, but I wrote this to assist fellow bug hunters
+                    with my experience.</p>
 
                 <p><strong>Thank You,<br>MR.X FACTOR</strong></p>
 
                 <h3 class="mt-5 mb-3">🔗 Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -197,45 +213,34 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "03";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 
-    <!-- Scripts -->
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>

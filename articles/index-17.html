@@ -8,14 +8,10 @@
     <meta name="author" content="Utsavpari Gosai" />
     <title>How I Got a $100 Bounty for Accessing Server Information and Status</title>
 
-    <!-- FontAwesome -->
     <script defer src="assets/fontawesome/js/all.min.js"></script>
-    <!-- Highlight.js -->
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
-    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
 
-    <!-- Custom Google Font -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
     <style>
@@ -115,7 +111,6 @@
             text-decoration: none;
         }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .container {
                 padding: 1.2rem;
@@ -169,31 +164,43 @@
             <div class="blog-post-body">
                 <p><i>Hello, Hackers! 👋</i></p>
 
-                <p>Hope you're all doing well. Today, I’m excited to share another bug I found, which earned me a $100 bounty. So, let’s dive in! 🚀</p>
+                <p>Hope you're all doing well. Today, I’m excited to share another bug I found, which earned me a $100
+                    bounty. So, let’s dive in! 🚀</p>
 
                 <h3>The Bug Discovery 🐛</h3>
-                <p>The bug was simple yet effective. I was hunting on the site <code>login.target.com</code> and decided to use <strong>paramspider</strong> to find any interesting parameters.</p>
+                <p>The bug was simple yet effective. I was hunting on the site <code>login.target.com</code> and decided
+                    to use <strong>paramspider</strong> to find any interesting parameters.</p>
 
                 <div class="code-block">
                     <p><code>paramspider -d login.target.com</code></p>
                 </div>
 
-                <p>I came across a particularly interesting URL endpoint: <code>/status</code>. When I visited this endpoint, I saw some server information. However, I noticed a parameter: <code>?full=FUZZ</code>.</p>
+                <p>I came across a particularly interesting URL endpoint: <code>/status</code>. When I visited this
+                    endpoint, I saw some server information. However, I noticed a parameter: <code>?full=FUZZ</code>.
+                </p>
 
-                <p>I tried several inputs for the <code>full</code> parameter, but nothing worked at first. Then, a thought crossed my mind. 🤔 I changed <code>full=false</code>—no change. But then I switched it to <code>full=true</code>, and BOOM! 💥 I was able to access the full server status and additional information about the running server.</p>
+                <p>I tried several inputs for the <code>full</code> parameter, but nothing worked at first. Then, a
+                    thought crossed my mind. 🤔 I changed <code>full=false</code>—no change. But then I switched it to
+                    <code>full=true</code>, and BOOM! 💥 I was able to access the full server status and additional
+                    information about the running server.</p>
 
                 <h3>Tip 💡</h3>
-                <p>Add <code>/status</code> and <code>/status?full=true</code> to your wordlist for future tests. It might come in handy!</p>
+                <p>Add <code>/status</code> and <code>/status?full=true</code> to your wordlist for future tests. It
+                    might come in handy!</p>
 
                 <h3>Bug Reporting 📝</h3>
-                <p>I immediately reported the bug. A few days later, the team validated it, successfully mitigated the issue, and rewarded me with a $100 bounty! 💰</p>
+                <p>I immediately reported the bug. A few days later, the team validated it, successfully mitigated the
+                    issue, and rewarded me with a $100 bounty! 💰</p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/11jANDQEdXru7Yxtg-4lasg.webp" style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);" alt="Blog Image">
+                    <img src="images/11jANDQEdXru7Yxtg-4lasg.webp"
+                        style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
+                        alt="Blog Image">
                 </div>
 
                 <h3>Final Thoughts 💭</h3>
-                <p>That’s the short story of how I found the bug. I hope you learned something useful from it. Remember to keep hunting, keep hacking, and always stay curious! 🔍</p>
+                <p>That’s the short story of how I found the bug. I hope you learned something useful from it. Remember
+                    to keep hunting, keep hacking, and always stay curious! 🔍</p>
 
                 <p>Thank you,</p>
 
@@ -201,7 +208,8 @@
 
                 <h3>Handles:</h3>
                 <ul>
-                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99" target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
+                    <li>Linktree: <a href="https://linktr.ee/mrxfact0r_99"
+                            target="_blank">https://linktr.ee/mrxfact0r_99</a></li>
                 </ul>
             </div>
             <div style="text-align: center; margin: 2rem 0;">
@@ -222,41 +230,31 @@
             <div class="blog-comments-section">
                 <div id="disqus_thread"></div>
                 <script>
-                    /**
-                     *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT 
-                     *  THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR 
-                     *  PLATFORM OR CMS.
-                     *  
-                     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: 
-                     *  https://disqus.com/admin/universalcode/#configuration-variables
-                     */
-                    
+
+
                     var disqus_config = function () {
-                        // Replace PAGE_URL with your page's canonical URL variable
-                        this.page.url = PAGE_URL;  
-                        
-                        // Replace PAGE_IDENTIFIER with your page's unique identifier variable
-                        this.page.identifier = PAGE_IDENTIFIER; 
+                        this.page.url = window.location.href;
+
+                        this.page.identifier = "17";
                     };
-                    
-                    
-                    (function() {  // REQUIRED CONFIGURATION VARIABLE: EDIT THE SHORTNAME BELOW
+
+
+                    (function () {
                         var d = document, s = d.createElement('script');
-                        
-                        // IMPORTANT TODO: Replace 3wmthemes with your forum shortname!
+
                         s.src = 'https://articles-8.disqus.com/embed.js';
-                        
+
                         s.setAttribute('data-timestamp', +new Date());
                         (d.head || d.body).appendChild(s);
                     })();
                 </script>
                 <noscript>
-                    Please enable JavaScript to view the 
+                    Please enable JavaScript to view the
                     <a href="https://disqus.com/?ref_noscript" rel="nofollow">
                         comments powered by Disqus.
                     </a>
                 </noscript>
-            </div><!--//blog-comments-section-->
+            </div>
         </article>
     </div>
 </body>
