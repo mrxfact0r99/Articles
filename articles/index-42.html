@@ -14,7 +14,9 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
 
     <style>
-        * { box-sizing: border-box; }
+        * {
+            box-sizing: border-box;
+        }
 
         body {
             margin: 0;
@@ -50,7 +52,9 @@
             margin-bottom: 1rem;
         }
 
-        .meta span { margin: 0 8px; }
+        .meta span {
+            margin: 0 8px;
+        }
 
         .blog-post-body p {
             line-height: 1.7;
@@ -58,9 +62,13 @@
             font-size: 1rem;
         }
 
-        ul { padding-left: 1.25rem; }
+        ul {
+            padding-left: 1.25rem;
+        }
 
-        ul li { margin-bottom: 0.5rem; }
+        ul li {
+            margin-bottom: 0.5rem;
+        }
 
         h3 {
             margin-top: 1.5rem;
@@ -105,16 +113,17 @@
                 </p>
 
                 <p>
-                    Today, I’m sharing a practical technique for identifying 
-                    <strong>information disclosure vulnerabilities through error messages</strong>. 
-                    Many applications unintentionally expose internal system details when errors are triggered — 
-                    sometimes resulting in low or medium severity findings, and occasionally leading to more impactful discoveries 🚨
+                    Today, I’m sharing a practical technique for identifying
+                    <strong>information disclosure vulnerabilities through error messages</strong>.
+                    Many applications unintentionally expose internal system details when errors are triggered —
+                    sometimes resulting in low or medium severity findings, and occasionally leading to more impactful
+                    discoveries 🚨
                 </p>
 
                 <h3>🔎 Finding Information Disclosure via Error Endpoints</h3>
 
                 <p>
-                    One effective method to uncover such issues is by analyzing historical URLs 
+                    One effective method to uncover such issues is by analyzing historical URLs
                     using Wayback data.
                 </p>
 
@@ -125,19 +134,19 @@
                 </p>
 
                 <div class="code-block">
-cat targetsubdomains.txt | waybackurls > waybackurls.txt
+                    cat targetsubdomains.txt | waybackurls > waybackurls.txt
                 </div>
 
                 <h3>🔍 Step 2: Filter for Interesting Keywords</h3>
 
                 <p>
-                    After collecting the URLs, filter them to identify endpoints 
+                    After collecting the URLs, filter them to identify endpoints
                     that may expose error messages or configuration details:
                 </p>
 
                 <div class="code-block">
-cat waybackurls.txt | grep "error"<br>
-cat waybackurls.txt | grep "config"
+                    cat waybackurls.txt | grep "error"<br>
+                    cat waybackurls.txt | grep "config"
                 </div>
 
                 <p>
@@ -166,8 +175,8 @@ cat waybackurls.txt | grep "config"
                 </ul>
 
                 <p>
-                    Even when categorized as low or medium severity, these findings 
-                    contribute significantly to strengthening an organization’s overall 
+                    Even when categorized as low or medium severity, these findings
+                    contribute significantly to strengthening an organization’s overall
                     security posture 🛡️
                 </p>
 
@@ -180,7 +189,7 @@ cat waybackurls.txt | grep "config"
                 <h3>🚀 Final Thoughts</h3>
 
                 <p>
-                    Small misconfigurations often go unnoticed — but they can provide 
+                    Small misconfigurations often go unnoticed — but they can provide
                     valuable insights into an application’s internal structure.
                 </p>
 
