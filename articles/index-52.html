@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="How I Got Acknowledged in NVIDIA’s Hall of Fame 🏅" />
+    <meta name="description" content="My Journey to Flipkart Hall of Fame Through Bug Bounty Hunting 🏆🐛" />
     <meta name="author" content="Utsavpari Gosai" />
-    <title>How I Got Acknowledged in NVIDIA’s Hall of Fame 🏅</title>
+    <title>How I Got Hall of Fame from Flipkart 🛍️🏆</title>
 
     <script defer src="assets/fontawesome/js/all.min.js"></script>
     <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
@@ -86,10 +86,10 @@
     <div class="main-wrapper">
         <article class="container">
             <header class="blog-post-header">
-                <h2 class="title">How I Got Acknowledged in NVIDIA’s Hall of Fame 🏅</h2>
+                <h2 class="title">How I Got Hall of Fame from Flipkart 🛍️🏆</h2>
                 <hr />
                 <div class="meta">
-                    <span class="date">April 29, 2026</span>
+                    <span class="date">May 4, 2026</span>
                     <span class="time">4 min read</span>
                     <span class="author">Utsavpari Gosai</span>
                 </div>
@@ -101,173 +101,159 @@
                 <p><i>Hello Hackers 👨‍💻🔐</i></p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/NVIDIA_Logo.jpg"
+                    <img src="images/Flipkart_Logo.jpg"
                         style="max-width: 60%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="NVIDIA Logo">
+                        alt="Flipkart Logo">
                 </div>
 
                 <p>
-                    I hope you all are doing well and continuing to secure our digital world 🌍🛡️
+                    I hope you all are doing well and continuing to secure our digital landscape 🔐✨
                 </p>
 
                 <p>
-                    Today, I’m sharing how I got acknowledged and added to the
-                    <strong>Hall of Fame by NVIDIA</strong> 🚀🏆
+                    Today, I want to share my long and interesting journey that led me to the
+                    <strong>Flipkart Hall of Fame</strong> 🏆
+                </p>
+
+                <h3>🚀 The Beginning</h3>
+
+                <p>
+                    I discovered that Bugbase.ai hosts a public bug bounty program for Flipkart.
+                    However, it doesn’t provide monetary rewards only acknowledgment and a Hall of Fame mention.
                 </p>
 
                 <p>
-                    Currently, NVIDIA stands at the No. 1 position in the world, ahead of giants like
-                    Google and Microsoft, which shows the incredible level they are operating on.
+                    Despite that, I decided to start hunting 🐛
                 </p>
 
                 <p>
-                    Most people are already familiar with NVIDIA, but for those who aren’t
-                    NVIDIA is known for its powerful graphics cards for gaming 🎮, advanced AI chips 🤖,
-                    robotics infrastructure, and large-scale AI innovation.
-                </p>
-
-                <h3>🚀 The Hunting Journey</h3>
-
-                <p>
-                    As we all know, many of the world’s best hackers and security researchers are actively
-                    hunting on NVIDIA’s assets, so finding anything valuable is very rare.
+                    During my experience, many of my reports stayed pending, and responses took months ⏳.
+                    The platform felt quite slow.
                 </p>
 
                 <p>
-                    But yes I was able to discover something important 🔥
+                    I completed my KYC around 3 months ago, but it is still pending. I also sent multiple emails 📩,
+                    but received no response ❌
                 </p>
 
                 <p>
-                    As usual, I started with
-                    <strong>subdomain enumeration</strong> 🔍 using prebuilt wordlists along with my
-                    personal custom wordlists.
+                    Clearly, the platform needs improvement, especially in terms of support and response time.
+                </p>
+
+                <h3>🎯 Private Program Opportunity</h3>
+
+                <p>
+                    One day, I received an invitation to Flipkart’s private bug bounty program 🎉
                 </p>
 
                 <p>
-                    I fingerprinted technologies, checked inputs and application flows through
-                    <strong>Burp Suite</strong>, and during testing, I came across a WordPress endpoint.
+                    I thought this was my opportunity to earn both a bounty 💰 and recognition.
+                </p>
+
+                <p>
+                    I started hunting again, but many of my reports were marked as informational.
+                    I couldn’t understand why 🤔
                 </p>
 
                 <h3>🧪 The Discovery</h3>
 
                 <p>
-                    I found the following endpoint on one subdomain:
+                    Eventually, I discovered a sensitive endpoint exposing a
+                    <strong>.classpath file</strong> 📂⚠️
                 </p>
 
                 <p>
-                    <strong>/wp-json/wp/v2/users/</strong>
+                    This file was leaking server directory information, which could be useful for attackers
+                    during further exploitation.
                 </p>
 
                 <p>
-                    This endpoint was leaking user information, including
-                    <strong>superuser details, admin names, metadata, and some PII-related information</strong>
-                    ⚠️
+                    I immediately reported the issue responsibly 📩
                 </p>
 
                 <p>
-                    Many companies do not accept this type of issue, but in this case, I could clearly
-                    see sensitive administrative information being exposed.
+                    However, the validation process was extremely slow 1 month, 2 months, even 3 months ⏱️
                 </p>
 
-                <p>
-                    I strongly believed it was worth reporting responsibly 📩
-                </p>
-
-                <h3>📩 Reporting & Recognition</h3>
+                <h3>📩 Response & Outcome</h3>
 
                 <p>
-                    After proper validation, I submitted the report through responsible disclosure.
-                </p>
-
-                <p>
-                    And yes
-                    <strong>NVIDIA accepted the report</strong> ✅
-                </p>
-
-                <p>
-                    After a few days, they fixed the issue and acknowledged my contribution.
+                    Finally, I received a response from the team.
                 </p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/NVIDIA_Response.jpeg"
+                    <img src="images/Flipkart_Response.jpeg"
                         style="max-width: 60%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="NVIDIA Response">
+                        alt="Panasonic Response">
                 </div>
 
-
                 <p>
-                    This proved to me why NVIDIA is currently No. 1
-                    they do not compromise on security at any level,
-                    whether the issue is Low, Medium, or Critical severity.
+                    They classified the issue as <strong>low impact</strong> and decided not to provide a bounty.
+                    However, they offered a <strong>Hall of Fame acknowledgment</strong>.
                 </p>
 
                 <p>
-                    In my case, it was marked as
-                    <strong>Medium Severity</strong>,
-                    but what impressed me the most was that NVIDIA also acknowledges even
-                    Low severity bugs through their Hall of Fame and values researchers who help improve security 🙌
+                    Honestly, I was quite surprised 😶 and didn’t fully agree with the impact assessment.
+                </p>
+
+                <p>
+                    But i faced this kind of experience with India's bug bounty programs.
+                </p>
+
+                <p>
+                    In many cases especially in some programs issues are fixed silently or marked as duplicates
+                    without proper credit so thats why i avoid India's bug bounty program due to my past experiences but
+                    in this case it is India's program with Indian bug bounty platform i appreciate atleast they give
+                    hall of fame 🙃
                 </p>
 
                 <p>
                     Hall Of Fame:
-                    <a href="https://www.nvidia.com/en-us/security/acknowledgements/">
-                        https://www.nvidia.com/en-us/security/acknowledgements/
+                    <a href="https://bugbase.ai/programs/flipkart">
+                        https://bugbase.ai/programs/flipkart
                     </a>
                 </p>
 
                 <div style="text-align: center; margin: 20px 0;">
-                    <img src="images/NVIDIA_HOF.png"
+                    <img src="images/Flipkart_HOF.png"
                         style="max-width: 100%; height: auto; border: 2px solid black; border-radius: 8px; box-shadow: 0 0 12px rgba(0,0,0,0.1);"
-                        alt="NVIDIA Response">
+                        alt="Panasonic Response">
                 </div>
 
+                <h3>🏅 Final Result</h3>
+
                 <ul>
-                    <li>✅ Report accepted successfully</li>
-                    <li>🏅 Hall of Fame recognition received</li>
-                    <li>🚀 One more dream achieved</li>
+                    <li>✅ Vulnerability reported successfully</li>
+                    <li>⏳ Long validation process</li>
+                    <li>🏆 Flipkart Hall of Fame acknowledgment received</li>
+                    <li>❌ No monetary bounty</li>
                 </ul>
 
                 <p>
-                    This is the professionalism I truly appreciate from NVIDIA 🔥
-                </p>
-
-                <h3>❤️ Gratitude</h3>
-
-                <p>
-                    I would like to thank my best friend
-                    <strong>K3$#!V@</strong> ❤️ for always supporting and motivating me,
-                    my family 👨‍👩‍👦,
-                    and the biggest hacker of this multiverse
-                    <strong>Shiva</strong> 🕉️❤️
-                </p>
-
-                <p>
-                    for his divine
-                    <strong>Pinak Dhanush and Blessings</strong> 🏹,
-                    I was able to hit the target perfectly 🎯
+                    Even though I didn’t receive a bounty, getting recognized in the Hall of Fame is still something
+                    I appreciate.
                 </p>
 
                 <h3>💡 Final Thoughts</h3>
 
-                <p>
-                    This journey taught me something important:
-                </p>
-
                 <ul>
-                    <li>🔍 Small findings can create big impact</li>
-                    <li>⚔️ Persistence always beats competition</li>
-                    <li>🛡️ Responsible disclosure builds trust</li>
-                    <li>🏆 Great companies respect ethical hackers</li>
+                    <li>🔍 Persistence is key in bug hunting</li>
+                    <li>⚠️ Not all valid bugs get rewarded</li>
+                    <li>⏳ Patience is required in disclosure processes</li>
+                    <li>🏆 Recognition still holds value</li>
                 </ul>
 
                 <p>
-                    If you have any questions or queries,
-                    feel free to connect with me through the given Linktree link 🔗
+                    That’s my story!
+                </p>
+
+                <p>
+                    If anyone has questions or queries, feel free to reach out through my Linktree links 🔗
                 </p>
 
                 <p>
                     <strong>
-                        Thank You, <br>
+                        Thank You,<br>
                         MR. X FACTOR
                     </strong>
                 </p>
@@ -304,7 +290,7 @@
                     <script>
                         var disqus_config = function () {
                             this.page.url = window.location.href;
-                            this.page.identifier = "50";
+                            this.page.identifier = "52";
                         };
 
                         (function () {
