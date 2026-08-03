@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="$50 Bounty for Two Security Misconfigurations 💰" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>$50 Bounty for Two Security Misconfigurations 💰</title>
+
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            text-align: center;
+            color: #666;
+            font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            margin: 0 8px;
+        }
+
+        .blog-post-body p {
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-top: 1.8rem;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 1.3rem;
+        }
+
+        ul li {
+            margin-bottom: .6rem;
+        }
+
+        img {
+            max-width: 100%;
+            border: 2px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .1);
+        }
+
+        a {
+            word-break: break-word;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <article class="container">
+
+            <header class="blog-post-header">
+
+                <h2 class="title">
+                    <strong>$50 Bounty</strong> for Two Security Misconfigurations 💰
+                </h2>
+
+                <hr>
+
+                <div class="meta">
+                    <span class="date">Jun 2026</span>
+                    <span class="time">3 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+
+                <hr>
+
+            </header>
+
+            <div class="blog-post-body">
+
+                <p><i>Hello Hackers! 👋</i></p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/dd.jpg" alt="Bug Bounty Reward" style="max-width:65%;">
+                </div>
+
+                <p>
+                    I hope you are all doing well and continuing to make the digital world a safer place. 🔐
+                    Let's get started!
+                </p>
+
+                <p>
+                    Today, I would like to share how I earned a total bug bounty of
+                    <strong>$50 ($25 + $25)</strong>
+                    by responsibly reporting two different security misconfigurations.
+                    Although the rewards were small, the experience taught me an important lesson about patience and
+                    persistence in bug bounty hunting.
+                </p>
+
+                <h3>🛡️ 1. Forced Logout via GET Request</h3>
+
+                <p>
+                    The first issue involved a
+                    <strong>Forced Logout via a GET Request.</strong>
+                </p>
+
+                <p>
+                    The application allowed users to be logged out simply by visiting a specific URL.
+                    No CSRF token or additional verification was required.
+                    This meant an attacker could send the logout URL to a victim, causing the victim to be logged out
+                    immediately.
+                </p>
+
+                <p>
+                    Initially, the security team responded with:
+                </p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/article58.jpeg" alt="Bug Bounty Reward" style="max-width:65%;">
+                </div>
+
+                <blockquote>
+                    <i>"We don't accept CSRF at logout as a security issue."</i>
+                </blockquote>
+
+                <p>
+                    I clarified that my report was
+                    <strong>not a traditional CSRF vulnerability</strong>,
+                    but rather a security misconfiguration that allowed forced logout through a simple GET request
+                    without any user interaction or protection.
+                </p>
+
+                <p>
+                    To be honest, after several months I almost forgot about the report.
+                    However, after approximately
+                    <strong>five months</strong>,
+                    I finally received an email saying:
+                </p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/article582.jpeg" alt="Bug Bounty Reward" style="max-width:65%;">
+                </div>
+
+                <blockquote>
+                    <strong>"Hello, The team has agreed to pay $25 for this issue."</strong>
+                </blockquote>
+
+                <p>
+                    🎉 Persistence paid off.
+                    The team eventually acknowledged the impact and rewarded me with
+                    <strong>$25.</strong>
+                </p>
+
+                <h3>💉 2. Injection Vulnerability</h3>
+
+                <p>
+                    The second finding was an
+                    <strong>Injection vulnerability.</strong>
+                </p>
+
+                <p>
+                    The application reflected my supplied input directly on the user's screen without proper
+                    sanitization.
+                    Improper handling of user-controlled input can introduce unnecessary security risks and should
+                    always be addressed through proper validation and output encoding.
+                </p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/article583.jpeg" alt="Bug Bounty Reward" style="max-width:65%;">
+                </div>
+
+                <p>
+                    After reviewing and validating my report, the company rewarded me with
+                    another <strong>$25.</strong> 💰
+                </p>
+
+
+                <h3>🏅 Lessons Learned</h3>
+
+                <ul>
+                    <li>🔍 Small security misconfigurations can still have real security impact.</li>
+                    <li>🛡️ Never underestimate seemingly low-severity findings.</li>
+                    <li>📩 Clear communication with security teams is just as important as finding the bug.</li>
+                    <li>⏳ Patience is a key skill in bug bounty hunting.</li>
+                    <li>🚀 Keep learning, keep reporting, and never stop improving.</li>
+                </ul>
+
+                <h3>💡 Final Thoughts</h3>
+
+                <p>
+                    Sometimes, God tests your patience not only in bug bounty hunting but also in life.
+                </p>
+
+                <p>
+                    Never give up.
+                    Never stop learning.
+                    Never stop hunting.
+                </p>
+
+                <p>
+                    ✨ Miracles can happen at any time, so keep reporting, keep improving, and stay patient.
+                </p>
+
+                <p>
+                    If you have any questions or would like to connect, feel free to reach out through my Linktree or
+                    social media handles.
+                </p>
+
+                <p>
+                    <strong>
+                        Thank You<br>
+                        MR.X FACTOR
+                    </strong>
+                </p>
+
+                <h3>🔗 Handles:</h3>
+
+                <ul>
+                    <li>
+                        Linktree:
+                        <a href="https://linktr.ee/mrxfact0r_99" target="_blank">
+                            https://linktr.ee/mrxfact0r_99
+                        </a>
+                    </li>
+                </ul>
+
+                <div style="text-align:center; margin:2rem 0;">
+
+                    <a href="../index.html" style="
+display:inline-block;
+padding:0.75rem 1.5rem;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:500;
+transition:0.3s;
+" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+
+                        ← Back To Homepage
+
+                    </a>
+
+                </div>
+
+                <div class="blog-comments-section">
+
+                    <div id="disqus_thread"></div>
+
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = window.location.href;
+                            this.page.identifier = "58";
+                        };
+
+                        (function () {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://articles-8.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+
+</body>
+
+</html>
