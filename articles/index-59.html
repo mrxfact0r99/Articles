@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Lapino'z Security Finding – Responsible Disclosure Story 🔐" />
+    <meta name="author" content="Utsavpari Gosai" />
+    <title>How I Got Acknowledged by La Pino'z Pizza 🍕🔐</title>
+
+    <script defer src="assets/fontawesome/js/all.min.js"></script>
+    <link rel="stylesheet" href="assets/plugins/highlight/styles/monokai-sublime.css" />
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .main-wrapper {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 820px;
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .blog-post-header .title {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .meta {
+            text-align: center;
+            color: #666;
+            font-size: .95rem;
+            margin-bottom: 1rem;
+        }
+
+        .meta span {
+            margin: 0 8px;
+        }
+
+        .blog-post-body p {
+            line-height: 1.8;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        h3 {
+            margin-top: 1.8rem;
+            color: #333;
+        }
+
+        ul {
+            padding-left: 1.3rem;
+        }
+
+        ul li {
+            margin-bottom: .6rem;
+        }
+
+        img {
+            max-width: 100%;
+            border: 2px solid #000;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0, 0, 0, .1);
+        }
+
+        a {
+            word-break: break-word;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="main-wrapper">
+
+        <article class="container">
+
+            <header class="blog-post-header">
+
+                <h2 class="title">
+                    How I Got Acknowledged by La Pino'z Pizza 🍕🔐
+                </h2>
+
+                <hr>
+
+                <div class="meta">
+                    <span class="date">July 2026</span>
+                    <span class="time">3 min read</span>
+                    <span class="author">Utsavpari Gosai</span>
+                </div>
+
+                <hr>
+
+            </header>
+
+            <div class="blog-post-body">
+
+                <p><i>Hello Hackers! 👋</i></p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/lapinoz.jpg" alt="lapino" style="max-width:60%;">
+                </div>
+
+                <p>
+                    I hope you all are doing well and continuing to secure our digital landscape. 🌍🔒
+                    Let's begin another security finding story!
+                </p>
+
+                <p>
+                    Recently, I found a security issue on the
+                    <strong>Lapino'z Pizza</strong>
+                    website. 🍕
+                    I was simply visiting their website to order some pizza, and I thought,
+                    <i>"Why not test it with my custom wordlist?"</i> 🤔
+                </p>
+
+                <p>
+                    So, I opened <strong>Kali Linux</strong> 💻 and started running my custom directory
+                    brute-forcing wordlist against the website. To my surprise, I discovered
+                    <strong>two sensitive <code>Git</code> related files</strong>
+                    that should not have been publicly accessible. 🚨
+                </p>
+
+                <h3>🤝 Responsible Disclosure</h3>
+
+                <p>
+                    Although <strong>Lapino'z does not have a Bug Bounty Program</strong>, I believe in
+                    <strong>responsible disclosure</strong> as a security researcher.
+                    So, I reported the issue to the support email address listed on their website. 📧
+                </p>
+
+                <p>
+                    Unfortunately, I never received any response. After waiting for some time, I assumed
+                    they were not interested in acknowledging the report. Based on my personal experience,
+                    many Indian companies still do not acknowledge security researchers even with a
+                    simple "Thank You" message. I eventually decided to move on. 😔
+                </p>
+
+                <h3>✅ The Fix</h3>
+
+                <p>
+                    A few days later, while checking my email, I revisited the vulnerable URL and was
+                    surprised to see that the issue had been <strong>fixed</strong>. ✅
+                    This confirmed that my report had helped improve their security. However, there was
+                    still <strong>no acknowledgment</strong> or reply.
+                </p>
+
+                <p>
+                    I sent multiple follow-up emails and even tried reaching out through
+                    <strong>X (formerly Twitter)</strong>, <strong>LinkedIn</strong>, and phone calls, but
+                    unfortunately, I didn't receive any response. 📩📞
+                    So, I finally decided to leave it there and move on.
+                </p>
+
+                <h3>🎉 A Thank You, At Last</h3>
+
+                <p>
+                    Then one day, while checking my LinkedIn notifications, I received a
+                    <strong>Thank You</strong> message from the official
+                    <strong>Lapino'z Support</strong> account. 🎉✨
+                </p>
+
+                <div style="text-align:center; margin:20px 0;">
+                    <img src="images/Lapinoz_Ack.jpeg" alt="Bug Bounty Reward" style="max-width:60%;">
+                </div>
+
+                <p>
+                    I was genuinely happy because, although there was no bounty (which is understandable
+                    since they don't have a bug bounty program), they finally acknowledged my contribution. 🙏❤️
+                </p>
+
+                <p>
+                    Sometimes, a simple "Thank You" means a lot to security researchers. It motivates us
+                    to continue reporting vulnerabilities responsibly and helping organizations become
+                    more secure. 🛡️
+                </p>
+
+                <p>
+                    I thank God for this acknowledgment and also thank all my well-wishers for their
+                    constant support and encouragement. ❤️🙏
+                </p>
+
+                <h3>🏅 Lessons Learned</h3>
+
+                <ul>
+                    <li>🔍 Even without a bug bounty program, responsible disclosure is worth doing.</li>
+                    <li>🛡️ Exposed Git files are a common but serious misconfiguration.</li>
+                    <li>📩 A lack of response doesn't mean the report was ignored it may still be fixed.</li>
+                    <li>⏳ Patience and persistence matter, even when acknowledgment is delayed.</li>
+                    <li>🚀 Keep learning, keep reporting, and never stop improving.</li>
+                </ul>
+
+                <h3>💡 Final Thoughts</h3>
+
+                <p>
+                    That's all for this finding story! If you have any questions or would like to discuss
+                    this finding, feel free to connect with me through my Linktree or any of my social
+                    media handles. 💬🔗
+                </p>
+
+                <p>
+                    <strong>
+                        Thank You,<br>
+                        MR.X FACTOR
+                    </strong>
+                </p>
+
+                <h3>🔗 Handles:</h3>
+
+                <ul>
+                    <li>
+                        Linktree:
+                        <a href="https://linktr.ee/mrxfact0r_99" target="_blank">
+                            https://linktr.ee/mrxfact0r_99
+                        </a>
+                    </li>
+                </ul>
+
+                <div style="text-align:center; margin:2rem 0;">
+
+                    <a href="../index.html" style="
+display:inline-block;
+padding:0.75rem 1.5rem;
+background:#007bff;
+color:white;
+text-decoration:none;
+border-radius:8px;
+font-weight:500;
+transition:0.3s;
+" onmouseover="this.style.backgroundColor='#0056b3'" onmouseout="this.style.backgroundColor='#007bff'">
+
+                        ← Back To Homepage
+
+                    </a>
+
+                </div>
+
+                <div class="blog-comments-section">
+
+                    <div id="disqus_thread"></div>
+
+                    <script>
+                        var disqus_config = function () {
+                            this.page.url = window.location.href;
+                            this.page.identifier = "59";
+                        };
+
+                        (function () {
+                            var d = document, s = d.createElement('script');
+                            s.src = 'https://articles-8.disqus.com/embed.js';
+                            s.setAttribute('data-timestamp', +new Date());
+                            (d.head || d.body).appendChild(s);
+                        })();
+                    </script>
+
+                </div>
+
+            </div>
+
+        </article>
+
+    </div>
+
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <script src="assets/js/blog.js"></script>
+
+</body>
+
+</html>
